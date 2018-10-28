@@ -61,7 +61,10 @@ public class GoogleProductTemplate  {
 		get {
 			return _PriceAmountMicros / 1000000f;
 		} 
-		
+
+		set { 
+			_PriceAmountMicros = (long)(value * 1000000f);
+		}
 
 	}
 		

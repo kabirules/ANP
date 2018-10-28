@@ -167,6 +167,11 @@ static public class Manager {
 		string pattern = @"android___";
 		string replacement = "android:";
 		Regex regex = new Regex (pattern);
+		src = regex.Replace(src, replacement);
+
+		pattern = @"tools___";
+		replacement = "tools:";
+		regex = new Regex(pattern);
 		src = regex.Replace (src, replacement);
 		reader.Close ();
 

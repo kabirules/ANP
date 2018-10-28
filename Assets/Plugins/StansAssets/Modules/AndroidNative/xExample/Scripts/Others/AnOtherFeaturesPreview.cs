@@ -88,7 +88,7 @@ public class AnOtherFeaturesPreview : MonoBehaviour {
 
 	private void LicenseRequestResult(AN_LicenseRequestResult result) {
 		SA_StatusBar.text =  "App License Status: " + result.ToString();
-		AndroidMessage.Create("License Check Result: ", "AN_LicenseRequestResult: " +  result.ToString());
+		AndroidMessage.Create("License Check Result: ", "Status: " +  result.Status.ToString() + " \nError: " +  result.Error.ToString());
 	}
 
 

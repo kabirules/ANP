@@ -33,23 +33,55 @@ namespace SA.Common.Editor {
 
 					string path = "Assets/" + SA.Common.Config.SUPPORT_MODULS_PATH + "Common/Editor/Content/";
 
-					if(EditorGUIUtility.isProSkin) {
-						path = path + "sa_logo_small.png";
-					} else {
-						path = path + "sa_logo_small_light.png";
-					}
+                    if (EditorGUIUtility.isProSkin) {
+                        path = path + "sa_logo_small.png";
+                    } else {
+                        path = path + "sa_logo_small_light.png";
+                    }
 
-					TextureImporter importer = (TextureImporter)TextureImporter.GetAtPath(path);
-					importer.textureType = TextureImporterType.GUI;
-					AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
-			
-					_SALogo = AssetDatabase.LoadAssetAtPath(path, typeof(Texture2D)) as Texture2D;
+                    _SALogo = EditorIcon.GetIconAtPath(path);
 				} 
 				
 				return _SALogo;
 			}
 		}
-		
+
+
+
+		//--------------------------------------
+		// App info
+		//--------------------------------------
+
+
+		public static string ApplicationIdentifier {
+
+			get {
+				#if UNITY_5_6_OR_NEWER
+				return PlayerSettings.applicationIdentifier;
+				#else
+				return PlayerSettings.bundleIdentifier;
+				#endif
+			}
+
+			set {
+				#if UNITY_5_6_OR_NEWER
+				PlayerSettings.applicationIdentifier = value;
+				#else
+				PlayerSettings.bundleIdentifier = value;
+				#endif
+			}
+		}
+
+
+
+		public static Texture2D GetEditorTexture(string path) {
+			path = "Assets/" + path;
+			TextureImporter importer = (TextureImporter)TextureImporter.GetAtPath(path);
+			importer.textureType = TextureImporterType.GUI;
+			AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
+
+			return  AssetDatabase.LoadAssetAtPath(path, typeof(Texture2D)) as Texture2D;
+		}
 		
 		public static void DrawSALogo() {
 			
@@ -61,6 +93,14 @@ namespace SA.Common.Editor {
 				Application.OpenURL(SA.Common.Config.WEBSITE_ROOT_URL);
 			}
 		}
+
+
+		public static void DrawSeparatorLine()  {
+			GUI.enabled = false ;
+			EditorGUILayout.TextArea("",GUI.skin.horizontalSlider);
+			GUI.enabled = true;
+		}
+
 
 		public static bool ToggleFiled(string title, bool value, string tooltip = "") {
 			return ToggleFiled (new GUIContent (title, tooltip), value);
@@ -127,9 +167,7 @@ namespace SA.Common.Editor {
 			return value;
 
 		}
-
-
-
+			
 
 
 		public static string TextField(string title, string value, string tooltip = "") {
@@ -152,6 +190,34 @@ namespace SA.Common.Editor {
 
 		}
 
+		public static void LabelField(string title, string message) {
+			GUIContent c =  new GUIContent(title, "");
+			LabelField (c, message);
+		}
+
+		public static void LabelField(GUIContent label, string message) {
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField(label);
+			EditorGUILayout.LabelField(message);
+			EditorGUILayout.EndHorizontal();
+		}
+
+
+		public static void SelectableLabel(string title, string message) {
+			GUIContent c =  new GUIContent(title, "");
+			SelectableLabel (c, message);
+		}
+
+		public static void SelectableLabel(GUIContent label, string message) {
+			EditorGUILayout.BeginHorizontal();
+			EditorGUILayout.LabelField(label, GUILayout.Width(180), GUILayout.Height(16));
+			EditorGUILayout.SelectableLabel(message, GUILayout.Height(16));
+			EditorGUILayout.EndHorizontal();
+		}
+
+		public static void SelectableLabelField(GUIContent label, string message) {
+			SelectableLabel (label, message);
+		}
 
 
 
@@ -228,33 +294,24 @@ namespace SA.Common.Editor {
 
 
 		private static GUIContent SupportEmail = new GUIContent("Support [?]", "If you have any technical questions, feel free to drop us an e-mail");
+
 		public static void SupportMail() {
 			SelectableLabelField(SupportEmail, SA.Common.Config.SUPPORT_EMAIL);
 		}
 
 		private static GUIContent FBdkVersion   	= new GUIContent("Facebook SDK Version [?]", "Version of Unity Facebook SDK Plugin");
+
 		public static void FBSdkVersionLabel () {
-
 			string SdkVersionCode = SA.Common.Config.FB_SDK_VersionCode;
-
-
-
-
 			SelectableLabelField(FBdkVersion,  SdkVersionCode);
 		}
 
-
-
-		
-		public static void SelectableLabelField(GUIContent label, string value) {
-			EditorGUILayout.BeginHorizontal();
-			EditorGUILayout.LabelField(label, GUILayout.Width(180), GUILayout.Height(16));
-			EditorGUILayout.SelectableLabel(value, GUILayout.Height(16));
-			EditorGUILayout.EndHorizontal();
+		public static Texture2D LoadTexture2D(string name) {
+			string path = "Assets/" + SA.Common.Config.SUPPORT_MODULS_PATH + "Common/Editor/Content/" + name;
+			
+			return EditorIcon.GetIconAtPath(path);
 		}
-
 	}
-
 }
 
 #endif

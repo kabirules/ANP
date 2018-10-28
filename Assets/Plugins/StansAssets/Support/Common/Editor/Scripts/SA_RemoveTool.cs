@@ -88,7 +88,6 @@ namespace SA.Common.Editor {
 			SA.Common.Util.Files.DeleteFolder (SA.Common.Config.COMMON_LIB_PATH);
 			SA.Common.Util.Files.DeleteFolder (SA.Common.Config.VERSION_INFO_PATH);
 			SA.Common.Util.Files.DeleteFolder (SA.Common.Config.NATIVE_LIBRARIES_PATH);
-			SA.Common.Util.Files.DeleteFolder (SA.Common.Config.EDITOR_TESTING_LIB_PATH);
 		
 
 

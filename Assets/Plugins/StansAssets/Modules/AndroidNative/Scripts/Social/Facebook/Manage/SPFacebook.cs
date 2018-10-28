@@ -16,8 +16,7 @@ using System.Collections.Generic;
 
 public class SPFacebook : SA.Common.Pattern.Singleton<SPFacebook> {
 
-
-	public delegate void FB_Delegate(FB_Result result);
+    public delegate void FB_Delegate(FB_Result result);
 	
 	
 	private FB_UserInfo _userInfo = null;
@@ -38,11 +37,11 @@ public class SPFacebook : SA.Common.Pattern.Singleton<SPFacebook> {
 	
 	
 	//Actinos
-	public static event Action OnPostStarted 					= delegate {};
-	public static event Action OnLoginStarted 					= delegate {};
-	public static event Action OnLogOut 						= delegate {};
-	public static event Action OnFriendsRequestStarted 		= delegate {};
-
+	public static event Action OnPostStarted 					        = delegate {};
+	public static event Action OnLoginStarted 					        = delegate {};
+	public static event Action OnLogOut 						        = delegate {};
+	public static event Action OnFriendsRequestStarted 		            = delegate {};
+    public static event Action<FB_AppInviteResult> OnAppInviteSent      = delegate {};
 
 	public static event Action OnInitCompleteAction = delegate {};
 	public static event Action<FB_PostResult> OnPostingCompleteAction = delegate {};
@@ -59,9 +58,6 @@ public class SPFacebook : SA.Common.Pattern.Singleton<SPFacebook> {
 	public static event Action<FB_AppRequestResult> OnAppRequestCompleteAction = delegate {};
 	public static event Action<FB_Result> OnAppRequestsLoaded = delegate {};
 
-
-	public static event Action<FB_PermissionResult> OnPermissionsLoaded = delegate {};
-	public static event Action<FB_Result> 		OnRevokePermission 	= delegate {};
 	
 	//--------------------------------------
 	//  Scores API 
@@ -120,24 +116,17 @@ public class SPFacebook : SA.Common.Pattern.Singleton<SPFacebook> {
 
 		FB.Login(scopes);
 	}
-	
-	
-	//--------------------------------------
-	//  API METHODS
-	//--------------------------------------
+
+    //--------------------------------------
+    //  API METHODS
+    //--------------------------------------
 
 
-	/*
-	public void CallPermissionCheck() {
-		FB.API("/me/permissions", FB_HttpMethod.GET, PermissionCallback);
-	}
+    public void SendAppInvite(string appLinkUrl, string previewImageUrl) {
+        FB.AppInvite(appLinkUrl, previewImageUrl);
+    }
 
-	public void RevokePermission(FBPermission permission) {
-		FB.API ("me/permissions/" + permission.Name, FB_HttpMethod.DELETE, RemovePermissionCallback);
-	}
-	*/
-	
-	public void Logout() {
+    public void Logout() {
 		OnLogOut();
 		FB.Logout();
 	}
@@ -268,11 +257,8 @@ public class SPFacebook : SA.Common.Pattern.Singleton<SPFacebook> {
 	public void SendInvite(string title, string message, string data = "", string[] to = null) {
 		AppRequest(message, to, null, null, default(int?), data, title);
 	}
-	
-	
 
-	
-	private void OnAppRequestFailed_AndroidCB(string error) {
+    private void OnAppRequestFailed_AndroidCB(string error) {
 		FB_AppRequestResult res =  new FB_AppRequestResult("",error);
 		OnAppRequestCompleteAction(res);
 	}
@@ -1030,6 +1016,11 @@ public class SPFacebook : SA.Common.Pattern.Singleton<SPFacebook> {
 	public void AppRequestCallback(FB_AppRequestResult result) {
 		OnAppRequestCompleteAction(result);
 	}
+
+    public void AppInviteResultCallback(FB_AppInviteResult result)
+    {
+        OnAppInviteSent(result);
+    }
 	
 	//--------------------------------------
 	//  Internal Event Handlets

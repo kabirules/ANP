@@ -292,7 +292,7 @@ public class SocialPlatfromSettingsEditor : Editor {
 				intent_filter.GetOrCreatePropertyWithName("category", "android.intent.category.BROWSABLE");
 				SA.Manifest.PropertyTemplate data = intent_filter.GetOrCreatePropertyWithTag("data");
 				data.SetValue("android:scheme", "oauth");
-				data.SetValue("android:host", PlayerSettings.applicationIdentifier);
+				data.SetValue("android:host", SA.Common.Editor.Tools.ApplicationIdentifier);
 			} 
 		} else {
 			if(SocialProxyActivity != null) {
@@ -415,7 +415,7 @@ public class SocialPlatfromSettingsEditor : Editor {
 			
 			
 		EditorGUILayout.BeginHorizontal();
-		EditorGUILayout.LabelField("Keep Android Mnifest Clean");
+		EditorGUILayout.LabelField("Keep Android Manifest Clean");
 			
 		EditorGUI.BeginChangeCheck();
 		SocialPlatfromSettings.Instance.KeepManifestClean = EditorGUILayout.Toggle(SocialPlatfromSettings.Instance.KeepManifestClean);

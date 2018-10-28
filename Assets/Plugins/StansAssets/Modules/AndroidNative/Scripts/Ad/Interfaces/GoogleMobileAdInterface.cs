@@ -17,7 +17,6 @@ public interface GoogleMobileAdInterface  {
 
 	void Init(string ad_unit_id);
 	void Init(string banners_unit_id, string interstisial_unit_id);
-	void InitEditorTesting(bool isEditorTestingEnabled, int fillRate);
 
 	void SetBannersUnitID(string ad_unit_id);
 	void SetInterstisialsUnitID(string ad_unit_id);
@@ -53,7 +52,7 @@ public interface GoogleMobileAdInterface  {
 
 	//Actions
 	event Action OnInterstitialLoaded;
-	event Action OnInterstitialFailedLoading;
+    event Action<int> OnInterstitialFailedLoading;
 	event Action OnInterstitialOpened;
 	event Action OnInterstitialClosed;
 	event Action OnInterstitialLeftApplication;

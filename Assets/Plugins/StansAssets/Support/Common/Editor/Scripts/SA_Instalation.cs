@@ -15,11 +15,8 @@ namespace SA.Common.Editor {
 
 	public class Instalation : MonoBehaviour {
 		
-		
-
-		
-		
-		
+		private const string GA_FIREBASE_IDS_FILE_START = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n  <string name=\"google_app_id\">";
+		private const string GA_FIREBASE_IDS_FILE_END = "</string>\n</resources>\n";		
 		
 		
 		public static void IOS_UpdatePlugin() {
@@ -28,11 +25,7 @@ namespace SA.Common.Editor {
 		
 		public static void IOS_InstallPlugin(bool IsFirstInstall = true) {
 			
-			IOS_CleanUp();
-			
-			
-			
-			
+			IOS_CleanUp();			
 			
 			//IOS Native
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.IOS_SOURCE_PATH + "ISN_Camera.mm.txt", 				SA.Common.Config.IOS_DESTANATION_PATH + "ISN_Camera.mm");
@@ -44,14 +37,13 @@ namespace SA.Common.Editor {
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.IOS_SOURCE_PATH + "ISN_GestureRecognizer.mm.txt", 		SA.Common.Config.IOS_DESTANATION_PATH + "ISN_GestureRecognizer.mm");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.IOS_SOURCE_PATH + "ISN_CloudKit.mm.txt", 				SA.Common.Config.IOS_DESTANATION_PATH + "ISN_CloudKit.mm");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.IOS_SOURCE_PATH + "ISN_NSData+Base64.h.txt", 			SA.Common.Config.IOS_DESTANATION_PATH + "ISN_NSData+Base64.h");
-			SA.Common.Util.Files.CopyFile(SA.Common.Config.IOS_SOURCE_PATH + "ISN_NSData+Base64.m.txt", 			SA.Common.Config.IOS_DESTANATION_PATH + "ISN_NSData+Base64.m");
-			
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.IOS_SOURCE_PATH + "ISN_NSData+Base64.m.txt", 			SA.Common.Config.IOS_DESTANATION_PATH + "ISN_NSData+Base64.m");			
+
+
 			
 			IOS_Install_SocialPart();
-			InstallGMAPart();
-			
-			
-			
+			InstallGMAPart();		
+			Instal_MNP ();
 		}
 		
 		public static void InstallGMAPart() {
@@ -69,7 +61,11 @@ namespace SA.Common.Editor {
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.IOS_SOURCE_PATH + "ISN_NativeCore.h.txt", 		SA.Common.Config.IOS_DESTANATION_PATH + "ISN_NativeCore.h");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.IOS_SOURCE_PATH + "ISN_NativeCore.mm.txt", 	SA.Common.Config.IOS_DESTANATION_PATH + "ISN_NativeCore.mm");
 		}
-		
+
+
+		public static void Instal_MNP() {
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.IOS_SOURCE_PATH + "MNP_UIController.mm.txt", 	SA.Common.Config.IOS_DESTANATION_PATH + "MNP_UIController.mm");
+		}
 		
 		
 		
@@ -89,10 +85,12 @@ namespace SA.Common.Editor {
 			SA.Common.Util.Files.DeleteFolder(SA.Common.Config.ANDROID_DESTANATION_PATH + "facebook");
 			SA.Common.Util.Files.DeleteFolder("Plugins/facebook", false);
 			SA.Common.Util.Files.DeleteFolder("Facebook", false);
-			SA.Common.Util.Files.DeleteFolder("FacebookSDK", false);
-			
-			//MSP
-			SA.Common.Util.Files.DeleteFile("Extensions/MobileSocialPlugin/Example/Scripts/MSPFacebookUseExample.cs", false);
+            SA.Common.Util.Files.DeleteFolder("Plugins/Facebook", false);
+            SA.Common.Util.Files.DeleteFolder("FacebookSDK", false);
+            SA.Common.Util.Files.DeleteFolder("Plugins/FacebookSDK", false);
+
+            //MSP
+            SA.Common.Util.Files.DeleteFile("Extensions/MobileSocialPlugin/Example/Scripts/MSPFacebookUseExample.cs", false);
 			SA.Common.Util.Files.DeleteFile("Extensions/MobileSocialPlugin/Example/Scripts/MSP_FacebookAnalyticsExample.cs", false);
 			SA.Common.Util.Files.DeleteFile("Extensions/MobileSocialPlugin/Example/Scripts/MSP_FacebookAndroidTurnBasedAndGiftsExample.cs", false);
 			
@@ -231,7 +229,9 @@ namespace SA.Common.Editor {
 			RemoveIOSFile("IOSTwitterPlugin");
 			RemoveIOSFile("MGInstagram");
 			
-			
+
+			//MNP
+			RemoveIOSFile("MNP_UIController");
 			
 			
 			
@@ -263,6 +263,34 @@ namespace SA.Common.Editor {
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/firebase-common.aar");
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/firebase-iid.aar");
 		}
+
+		public static void EnableFirebaseDynamicLinks() {
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "firebase/firebase-dynamic-links.txt", 		SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/firebase-dynamic-links.aar");
+		}
+
+		public static void DisableFirebaseDynamicLinks() {
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/firebase-dynamic-links.aar");
+		}
+
+		public static void EnableGoogleFit() {
+			#if UNITY_4_6 || UNITY_4_7
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "fitness/an_fitness.jar.txt", 				SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/an_fitness.jar");
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "fitness/play-services-fitness.jar.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-fitness.jar");
+			#else
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "fitness/an_fitness.txt", 					SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/an_fitness.aar");
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "fitness/play-services-fitness.txt", 		SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-fitness.aar");
+			#endif
+		}
+
+		public static void DisableGoogleFit() {
+			#if UNITY_4_6 || UNITY_4_7
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/an_fitness.jar");
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-fitness.jar");
+			#else
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/an_fitness.aar");
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-fitness.aar");
+			#endif
+		}
 		
 		public static void EnableGooglePlayAPI() {
 			#if UNITY_4_6 || UNITY_4_7
@@ -281,6 +309,7 @@ namespace SA.Common.Editor {
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-auth.jar.txt", 				SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-auth.jar");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-auth-base.jar.txt", 			SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-auth-base.jar");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-drive.jar.txt", 				SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-drive.jar");
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-tasks.jar.txt", 				SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-tasks.jar");
 			#else
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/an_googleplay.txt", 					SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/an_googleplay.aar");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-base.txt", 				SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-base.aar");
@@ -297,6 +326,7 @@ namespace SA.Common.Editor {
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-auth.txt", 				SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-auth.aar");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-auth-base.txt", 			SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-auth-base.aar");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-drive.txt", 				SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-drive.aar");
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-tasks.txt", 				SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-tasks.aar");
 			#endif
 		}
 		
@@ -317,6 +347,7 @@ namespace SA.Common.Editor {
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-auth.jar");
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-auth-base.jar");
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-drive.jar");
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-tasks.jar");
 			#else
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/an_googleplay.aar");
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-base.aar");
@@ -333,6 +364,7 @@ namespace SA.Common.Editor {
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-auth.aar");
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-auth-base.aar");
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-drive.aar");
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-tasks.aar");
 			#endif
 		}
 
@@ -375,7 +407,7 @@ namespace SA.Common.Editor {
 		public static void EnableAnalyticsAPI() {
 			#if UNITY_4_6 || UNITY_4_7
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-analytics.jar.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-analytics.jar");
-			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-analytics-impl.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-analytics-impl.aar");
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-analytics-impl.jar.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-analytics-impl.jar");
 			#else
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-analytics.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-analytics.aar");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-analytics-impl.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-analytics-impl.aar");
@@ -448,9 +480,11 @@ namespace SA.Common.Editor {
 			#if UNITY_4_6 || UNITY_4_7
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-ads.jar.txt", 		SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-ads.jar");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-ads-lite.jar.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-ads-lite.jar");
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-safetynet.jar.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-safetynet.jar");
 			#else
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-ads.txt", 		SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-ads.aar");
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-ads-lite.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-ads-lite.aar");
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "google_play/play-services-safetynet.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-safetynet.aar");
 			#endif
 		}
 
@@ -458,9 +492,11 @@ namespace SA.Common.Editor {
 			#if UNITY_4_6 || UNITY_4_7
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-ads.jar");
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-ads-lite.jar");
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-safetynet.jar");
 			#else
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-ads.aar");
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-ads-lite.aar");
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/play-services-safetynet.aar");
 			#endif
 		}
 
@@ -488,7 +524,48 @@ namespace SA.Common.Editor {
 		public static void DisableAndroidCampainAPI() {
 			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/sa_analytics.jar");
 		}
-		
+
+
+		public static void GAEnableFirebaseAPI(string appId) {
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "libs/sa_firebase.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/sa_firebase.jar");
+
+			string file = SA.Common.Config.ANDROID_DESTANATION_PATH + "GA_Firebase/res/values/ids.xml";
+			if (!SA.Common.Util.Files.IsFileExists (file)) {
+				SA.Common.Util.Files.CreateFile (file);
+			}
+			SA.Common.Util.Files.Write (file, GA_FIREBASE_IDS_FILE_START + appId + GA_FIREBASE_IDS_FILE_END);
+
+			file = "GA_Firebase/project.properties";
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "libs/" + file, 	SA.Common.Config.ANDROID_DESTANATION_PATH + file);
+
+			file = "GA_Firebase/AndroidManifest";
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "libs/" + file + ".txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + file + ".xml");
+
+#if UNITY_4_6 || UNITY_4_7
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "libs/android-support-v4.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/android-support-v4.jar");
+#else
+			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "libs/support-v4-24.1.1.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/support-v4-24.1.1.aar");
+#endif
+
+			EnableGooglePlayAPI ();
+			EnableFirebaseAnalytics ();
+		}
+
+
+		public static void GADisableFirebaseAPI() {
+			SA.Common.Util.Files.DeleteFile (SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/sa_firebase.jar");
+			SA.Common.Util.Files.DeleteFolder (SA.Common.Config.ANDROID_DESTANATION_PATH + "GA_Firebase");
+
+#if UNITY_4_6 || UNITY_4_7
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/android-support-v4.jar");
+#else
+			SA.Common.Util.Files.DeleteFile(SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/support-v4-24.1.1.aar");
+#endif
+
+			DisableGooglePlayAPI ();
+			DisableFirebaseAnalytics ();
+		}
+
 		
 		public static void EnableAppLicensingAPI() {
 			SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + "app_licensing/an_licensing_library.txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + "libs/an_licensing_library.jar");
@@ -663,7 +740,7 @@ namespace SA.Common.Editor {
 			//First install dependense		
 			
 			file = "AndroidManifest";
-			if(!SA.Common.Util.Files.IsFileExists(SA.Common.Config.ANDROID_DESTANATION_PATH + file)) {
+			if(!SA.Common.Util.Files.IsFileExists(SA.Common.Config.ANDROID_DESTANATION_PATH + file + ".xml")) {
 				SA.Common.Util.Files.CopyFile(SA.Common.Config.ANDROID_SOURCE_PATH + file + ".txt", 	SA.Common.Config.ANDROID_DESTANATION_PATH + file + ".xml");
 			} 
 			
@@ -676,8 +753,11 @@ namespace SA.Common.Editor {
 		public static bool IsFacebookInstalled {
 			get {
 				return SA.Common.Util.Files.IsFileExists("Facebook/Scripts/FB.cs")
-					|| SA.Common.Util.Files.IsFileExists("FacebookSDK/SDK/Scripts/FB.cs")
-					|| SA.Common.Util.Files.IsFileExists("FacebookSDK/Plugins/Facebook.Unity.dll");
+                    || SA.Common.Util.Files.IsFileExists("Plugins/Facebook/Scripts/FB.cs")
+                    || SA.Common.Util.Files.IsFileExists("FacebookSDK/SDK/Scripts/FB.cs")
+					|| SA.Common.Util.Files.IsFileExists("FacebookSDK/Plugins/Facebook.Unity.dll")
+					|| SA.Common.Util.Files.IsFileExists("Plugins/FacebookSDK/Plugins/Facebook.Unity.dll")
+					|| SA.Common.Util.Files.IsFileExists("FacebookSDK/SDK/Resources/FacebookSettings.asset");
 			}
 		}
 		

@@ -46,6 +46,12 @@ public class AndroidNativeMenu : EditorWindow {
 		Application.OpenURL(url);
 	}
 
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Getting Started/Manifest Requirements", false, 101)]
+	public static void GettingStartedManifestRequirements() {
+		string url = "https://unionassets.com/android-native-plugin/apis-and-requirements-192";
+		Application.OpenURL(url);
+	}
+
 	//--------------------------------------
 	//  IN-APP-Purchases
 	//--------------------------------------
@@ -68,12 +74,23 @@ public class AndroidNativeMenu : EditorWindow {
 		Application.OpenURL(url);
 	}
 
-	[MenuItem("Window/Stan's Assets/Android Native/Documentation/In-App Purchases/Video Tutorials", false, 101)]
-	public static void InAppVideoTutorials() {
-		string url = "https://unionassets.com/android-native-plugin/video-tutorials-179";
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Getting Started/Transaction Validation", false, 101)]
+	public static void InAppCodingTransactionValidation() {
+		string url = "https://unionassets.com/android-native-plugin/transactions-validation-553";
 		Application.OpenURL(url);
 	}
 
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Getting Started/Editor Testing", false, 101)]
+	public static void InAppCodingEditorTesting() {
+		string url = "https://unionassets.com/android-native-plugin/editor-testing-528";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Getting Started/API Reference", false, 101)]
+	public static void InAppCodingAPIReference() {
+		string url = "https://unionassets.com/android-native-plugin/api-reference-529";
+		Application.OpenURL(url);
+	}
 	//--------------------------------------
 	//  GOOGLE PLAY SERVICES
 	//--------------------------------------
@@ -150,25 +167,21 @@ public class AndroidNativeMenu : EditorWindow {
 		Application.OpenURL(url);
 	}
 
-	//--------------------------------------
-	//  GOOGLE +
-	//--------------------------------------
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Google Play Services/App Invites", false, 101)]
+	public static void GPSGooglePlayAppInvites() {
+		string url = "https://unionassets.com/android-native-plugin/app-invites-512";
+		Application.OpenURL(url);
+	}
 
-	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Google+/Google+ Button", false, 101)]
-	public static void GooglePlusButton() {
-		string url = "https://unionassets.com/android-native-plugin/google-button-171";
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Google Play Services/Google Play API Reference", false, 101)]
+	public static void GPSGooglePlayAPIReferences() {
+		string url = "https://unionassets.com/android-native-plugin/api-references-479";
 		Application.OpenURL(url);
 	}
 
 	//--------------------------------------
 	//  SOCIAL
 	//--------------------------------------
-
-	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Social/Native Sharing", false, 101)]
-	public static void SocialNativeSharing() {
-		string url = "https://unionassets.com/android-native-plugin/native-sharing-164";
-		Application.OpenURL(url);
-	}
 
 	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Social/Facebook", false, 101)]
 	public static void SocialFacebook() {
@@ -181,10 +194,63 @@ public class AndroidNativeMenu : EditorWindow {
 		string url = "https://unionassets.com/android-native-plugin/twitter-167";
 		Application.OpenURL(url);
 	}
-	
-	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Social/Instagram Sharing", false, 101)]
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Social/Instagram", false, 101)]
 	public static void SocialInstagramSharing() {
 		string url = "https://unionassets.com/android-native-plugin/instagram-sharing-199";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Social/Google+", false, 101)]
+	public static void GooglePlusButton() {
+		string url = "https://unionassets.com/android-native-plugin/google-button-171";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Social/WhatsApp", false, 101)]
+	public static void WhatsApp() {
+		string url = "https://unionassets.com/android-native-plugin/whatsapp-569";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Social/Snapchat", false, 101)]
+	public static void Snapchat() {
+		string url = "https://unionassets.com/android-native-plugin/snapchat-570";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Social/E-mail", false, 101)]
+	public static void Email() {
+		string url = "https://unionassets.com/android-native-plugin/e-mail-571";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Social/Default Sharing Dialog", false, 101)]
+	public static void SocialNativeSharing() {
+		string url = "https://unionassets.com/android-native-plugin/native-sharing-164";
+		Application.OpenURL(url);
+	}
+
+
+	//--------------------------------------
+	//  PUSH NOTIFICATIONS
+	//--------------------------------------
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Push Notifications/Push Notifications", false, 101)]
+	public static void PNPushNotifications() {
+		string url = "https://unionassets.com/android-native-plugin/push-notifications-169";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Push Notifications/Push with Parse", false, 101)]
+	public static void PNPushWithParse() {
+		string url = "https://unionassets.com/android-native-plugin/push-notifications-with-parse-358";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Push Notifications/Push with OneSignal", false, 101)]
+	public static void PNPushWithOneSignal() {
+		string url = "https://unionassets.com/android-native-plugin/push-notifications-with-gamethrive-359";
 		Application.OpenURL(url);
 	}
 
@@ -246,13 +312,6 @@ public class AndroidNativeMenu : EditorWindow {
 		Application.OpenURL(url);
 	}
 
-	[MenuItem("Window/Stan's Assets/Android Native/Documentation/More Features/Native System Events", false, 101)]
-	public static void FeaturesNativeSystemEvents() {
-		string url = "https://unionassets.com/android-native-plugin/native-system-events-180";
-		Application.OpenURL(url);
-	}
-
-
 	[MenuItem("Window/Stan's Assets/Android Native/Documentation/More Features/App Licensing", false, 101)]
 	public static void FeaturesAppLicensing() {
 		string url = "https://unionassets.com/android-native-plugin/app-licensing-261";
@@ -277,25 +336,27 @@ public class AndroidNativeMenu : EditorWindow {
 		Application.OpenURL(url);
 	}
 
-	//--------------------------------------
-	//  PUSH NOTIFICATIONS
-	//--------------------------------------
-
-	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Push Notifications/Push Notifications", false, 101)]
-	public static void PNPushNotifications() {
-		string url = "https://unionassets.com/android-native-plugin/push-notifications-169";
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/More Features/Runtime Permissions", false, 101)]
+	public static void FeaturesRuntimePermissions() {
+		string url = "https://unionassets.com/android-native-plugin/runtime-permissions-511";
 		Application.OpenURL(url);
 	}
 
-	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Push Notifications/Push with Parse", false, 101)]
-	public static void PNPushWithParse() {
-		string url = "https://unionassets.com/android-native-plugin/push-notifications-with-parse-358";
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/More Features/Firebase Analytics", false, 101)]
+	public static void FeaturesFirebaseAnalytics() {
+		string url = "https://unionassets.com/android-native-plugin/firebase-analytics-545";
 		Application.OpenURL(url);
 	}
 
-	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Push Notifications/Push with OneSignal", false, 101)]
-	public static void PNPushWithOneSignal() {
-		string url = "https://unionassets.com/android-native-plugin/push-notifications-with-gamethrive-359";
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/More Features/Local Storage", false, 101)]
+	public static void FeaturesLocalStorage() {
+		string url = "https://unionassets.com/android-native-plugin/local-storage-551";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/More Features/Google Fit", false, 101)]
+	public static void FeaturesGoogleFit() {
+		string url = "https://unionassets.com/android-native-plugin/google-fit-594";
 		Application.OpenURL(url);
 	}
 
@@ -306,6 +367,18 @@ public class AndroidNativeMenu : EditorWindow {
 	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Third-Party Plug-Ins Support/Anti-Cheat Toolkit", false, 101)]
 	public static void TPPSAntiCheatToolkit() {
 		string url = "https://unionassets.com/android-native-plugin/anti-cheat-toolkit-420";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Third-Party Plug-Ins Support/Soomla", false, 101)]
+	public static void TPPSSoomla() {
+		string url = "https://unionassets.com/android-native-plugin/soomla-495";
+		Application.OpenURL(url);
+	}
+
+	[MenuItem("Window/Stan's Assets/Android Native/Documentation/Third-Party Plug-Ins Support/Simple IAP System", false, 101)]
+	public static void TPPSSimpleIAPSystem() {
+		string url = "https://unionassets.com/android-native-plugin/simple-iap-system-496";
 		Application.OpenURL(url);
 	}
 

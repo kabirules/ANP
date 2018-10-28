@@ -243,7 +243,7 @@ namespace SA.Manifest {
 							dlg.onClose += OnPermissionDlgClose;
 							dlg.onAddClick += OnAddActivityClick;
 							
-#if UNITY_5 && !UNITY_5_0
+#if UNITY_5 && !UNITY_5_0 || UNITY_2017
 							dlg.titleContent.text = "Add Activity";
 #else
 							dlg.title = "Add Activity";
@@ -308,7 +308,7 @@ namespace SA.Manifest {
 							dlg.onClose += OnPermissionDlgClose;
 							dlg.onAddClick += OnAddPermissionClick;
 							
-#if UNITY_5 && !UNITY_5_0
+#if UNITY_5 && !UNITY_5_0 || UNITY_2017
 							dlg.titleContent.text = "Add Permission";
 #else
 							dlg.title = "Add Permission";
@@ -491,7 +491,7 @@ namespace SA.Manifest {
 			dialog.onAddClick += OnAddValueClick;
 			dialog.onClose += OnValueDlgClose;
 
-#if UNITY_5 && !UNITY_5_0
+#if UNITY_5 && !UNITY_5_0 || UNITY_2017
 			dialog.titleContent.text = "Add Value";
 #else
 			dialog.title = "Add Value";
@@ -507,7 +507,7 @@ namespace SA.Manifest {
 			dialog.onAddClick += OnAddPropertyClick;
 			dialog.onClose += OnPropertyDlgClose;
 
-#if UNITY_5 && !UNITY_5_0
+#if UNITY_5 && !UNITY_5_0 || UNITY_2017
 			dialog.titleContent.text = "Add Property";
 #else
 			dialog.title = "Add Property";

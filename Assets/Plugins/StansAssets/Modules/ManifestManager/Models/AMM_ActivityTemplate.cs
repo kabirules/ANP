@@ -54,11 +54,13 @@ namespace SA.Manifest {
 		}
 
 		public bool IsLauncherProperty(PropertyTemplate property) {
-			if(property.Tag.Equals("intent-filter")) {
-				foreach (PropertyTemplate p in property.Properties["category"]) {
-					if (p.Values.ContainsKey("android:name")) {
-						if (p.Values["android:name"].Equals("android.intent.category.LAUNCHER")) {
-							return true;
+			if (property.Tag.Equals ("intent-filter")) {
+				if (property.Properties.ContainsKey ("category")) {
+					foreach (PropertyTemplate p in property.Properties["category"]) {
+						if (p.Values.ContainsKey ("android:name")) {
+							if (p.Values ["android:name"].Equals ("android.intent.category.LAUNCHER")) {
+								return true;
+							}
 						}
 					}
 				}

@@ -7,6 +7,7 @@ public class AndroidCamera : SA.Common.Pattern.Singleton<AndroidCamera>  {
 	//Actions
 	public event Action<AndroidImagePickResult> OnImagePicked = delegate{};
 	public event Action<AndroidImagesPickResult> OnImagesPicked = delegate {};
+	public event Action<AndroidVideoPickResult> OnVideoPicked = delegate {};
 	public event Action<GallerySaveResult> OnImageSaved = delegate{};
 
 	private static string _lastImageName = string.Empty;
@@ -45,6 +46,9 @@ public class AndroidCamera : SA.Common.Pattern.Singleton<AndroidCamera>  {
 		SA.Common.Util.Screen.TakeScreenshot(OnScreenshotReady);
 	}
 
+	public void GetVideoFromGallery() {
+		AndroidNative.GetVideoFromGallery();
+	}
 
 	public void GetImageFromGallery() {
 		AndroidNative.GetImageFromGallery();
@@ -56,6 +60,13 @@ public class AndroidCamera : SA.Common.Pattern.Singleton<AndroidCamera>  {
 	
 	public void GetImageFromCamera() {
 		AndroidNative.GetImageFromCamera(AndroidNativeSettings.Instance.SaveCameraImageToGallery);
+	}
+
+	private void OnVideoPickedCallback(string data) {
+		string[] callbackData = data.Split(new string[] { AndroidNative.DATA_SPLITTER }, StringSplitOptions.None);
+
+		AndroidVideoPickResult result = new AndroidVideoPickResult(callbackData[0], callbackData[1]);
+		OnVideoPicked(result);
 	}
 
 	private void OnImagePickedEvent(string data) {

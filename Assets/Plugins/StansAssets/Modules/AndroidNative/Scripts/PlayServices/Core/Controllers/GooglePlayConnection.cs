@@ -118,6 +118,14 @@ public class GooglePlayConnection : SA.Common.Pattern.Singleton<GooglePlayConnec
 
 	}
 
+	public void SignOut() {
+		if (_State == GPConnectionState.STATE_DISCONNECTED || _State == GPConnectionState.STATE_CONNECTING) {
+			return;
+		}
+
+		OnStateChange(GPConnectionState.STATE_DISCONNECTED);
+		AN_GMSGeneralProxy.signOut();
+	}
 
 	//--------------------------------------
 	// PUBLIC METHODS

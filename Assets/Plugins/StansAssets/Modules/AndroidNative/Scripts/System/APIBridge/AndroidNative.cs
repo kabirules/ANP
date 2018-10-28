@@ -20,7 +20,7 @@ public class AndroidNative {
 	public const string DATA_SPLITTER = "|";
 	public const string DATA_EOF = "endofline";
 	public const string DATA_SPLITTER2 = "|%|";
-
+	public const string DATA_SPLITTER3 = "`";
 
 	public static string[] StringToArray(string val) {
 		return val.Split(AndroidNative.DATA_SPLITTER [0]);
@@ -80,6 +80,14 @@ public class AndroidNative {
 
 	public static void SaveToGalalry(string ImageData, string name) {
 		CallAndroidNativeBridge("SaveToGalalry", ImageData, name);
+	}
+
+	public static void GetVideoAndStartShareIntent(string message, string caption) {
+		CallAndroidNativeBridge("GetVideoAndStartShareIntent", message, caption);
+	}
+
+	public static void GetVideoFromGallery() {
+		CallAndroidNativeBridge("GetVideoPathFromGallery");
 	}
 
 	public static void GetImageFromGallery() {
@@ -190,6 +198,14 @@ public class AndroidNative {
 		return string.Empty;
 		#endif
 
+	}
+
+	public static void RemoveData(string key) {
+		CallAndroidNativeBridge ("RemoveData", key);
+	}
+
+	public static void CopyToClipboard(string text) {
+		CallUtility ("CopyToClipboard", text);
 	}
 
 	private const string UTILITY_CLASSS = "com.androidnative.features.common.AndroidNativeUtility";

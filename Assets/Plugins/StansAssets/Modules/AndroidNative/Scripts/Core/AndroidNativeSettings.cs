@@ -17,9 +17,9 @@ using UnityEditor;
 
 public class AndroidNativeSettings : ScriptableObject {
 
-	public const string VERSION_NUMBER = "9.3";
-	public const string GOOGLE_PLAY_SDK_VERSION_NUMBER = "10.0.1";
-	public const string GOOGLE_PLAY_SDK_LEAGCY_VERSION_NUMBER = "10084000";
+    public const string VERSION_NUMBER = "9.10/" + SA.Common.Config.LIB_VERSION;
+	public const string GOOGLE_PLAY_SDK_VERSION_NUMBER = "11.4.2";
+	public const string GOOGLE_PLAY_SDK_LEAGCY_VERSION_NUMBER = "11400000";
 
 	public bool EnablePlusAPI 		= true;
 	public bool EnableGamesAPI 		= true;
@@ -32,11 +32,13 @@ public class AndroidNativeSettings : ScriptableObject {
 	public bool LoadQuestsIcons 	= true;
 	public bool LoadEventsIcons 	= true;
 	public bool ShowConnectingPopup = true;
+	public bool AutoLoadLocalPlayerScore = false;
 
+    //Google Fit
+    public bool GoogleFitEnabled = false;
 
-	//ATC:
-	public bool EnableATCSupport = false;
-
+    //ATC:
+    public bool EnableATCSupport = false;
 
 	//One Signal
 	public bool OneSignalEnabled = false;
@@ -123,6 +125,12 @@ public class AndroidNativeSettings : ScriptableObject {
 	public bool CheckAppLicenseAPI = true;
 	public bool NetworkStateAPI = false;
 	public bool FirebaseAnalytics = false;
+	public bool FirebaseDynamicLinks = false;
+
+	public string FirebaseAppId = string.Empty;
+	public string FirebaseApiKey = string.Empty;
+
+	public List<SA.AndroidNative.DynamicLinks.LinkEditorTemplate> DynamicLinks = new List<SA.AndroidNative.DynamicLinks.LinkEditorTemplate>();
 
 	public bool InAppPurchasesAPI = true;
 

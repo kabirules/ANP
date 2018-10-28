@@ -116,6 +116,10 @@ public class AN_GoogleAdProxy  {
 	public static void AddTestDevices(string cvsDeviceIds) {
 		CallActivityFunction ("Bridge_AddTestDevices", cvsDeviceIds);
 	}
+
+    public static void AddCustomParameter(string parameter, string value) {
+        CallActivityFunction("AddCustomParametr", parameter, value);
+    }
 	
 	public static void SetGender(int gender) {
 		CallActivityFunction ("Bridge_SetGender", gender.ToString());

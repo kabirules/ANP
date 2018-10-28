@@ -87,7 +87,7 @@ public class GoogleCloudMessageService : SA.Common.Pattern.Singleton<GoogleCloud
 	#endif
 
 	public void InitPushNotifications() {
-		AN_NotificationProxy.InitPushNotifications (
+		AN_CloudMessagingProxy.InitPushNotifications (
 			AndroidNativeSettings.Instance.PushNotificationSmallIcon == null ? string.Empty : AndroidNativeSettings.Instance.PushNotificationSmallIcon.name.ToLower(),
 			AndroidNativeSettings.Instance.PushNotificationLargeIcon == null ? string.Empty : AndroidNativeSettings.Instance.PushNotificationLargeIcon.name.ToLower(),
 		    AndroidNativeSettings.Instance.PushNotificationSound == null ? string.Empty : AndroidNativeSettings.Instance.PushNotificationSound.name,
@@ -100,7 +100,7 @@ public class GoogleCloudMessageService : SA.Common.Pattern.Singleton<GoogleCloud
 	}
 
 	public void InitPushNotifications(string smallIcon, string largeIcon, string sound, bool enableVibrationPush, bool showWhenAppForeground, bool replaceOldNotificationWithNew, string color) {
-		AN_NotificationProxy.InitPushNotifications (smallIcon, largeIcon, sound,enableVibrationPush, showWhenAppForeground, replaceOldNotificationWithNew, color);
+		AN_CloudMessagingProxy.InitPushNotifications (smallIcon, largeIcon, sound,enableVibrationPush, showWhenAppForeground, replaceOldNotificationWithNew, color);
 	}
 
 	public void InitParsePushNotifications() {
@@ -109,15 +109,19 @@ public class GoogleCloudMessageService : SA.Common.Pattern.Singleton<GoogleCloud
 	}
 
 	public void RgisterDevice() {
-		AN_NotificationProxy.GCMRgisterDevice(AndroidNativeSettings.Instance.GCM_SenderId);
+		AN_CloudMessagingProxy.GCMRgisterDevice(AndroidNativeSettings.Instance.GCM_SenderId);
 	}
 
 	public void LoadLastMessage() {
-		AN_NotificationProxy.GCMLoadLastMessage();
+		AN_CloudMessagingProxy.GCMLoadLastMessage();
 	}
 
 	public void RemoveLastMessageInfo() {
-		AN_NotificationProxy.GCMRemoveLastMessageInfo();
+		AN_CloudMessagingProxy.GCMRemoveLastMessageInfo();
+	}
+
+	public void HideAll() {
+		AN_CloudMessagingProxy.HideAllNotifications ();
 	}
 
 	//--------------------------------------

@@ -35,6 +35,7 @@ public class AN_API_NAME  {
 	public const string PoupsandPreloaders = "Poups and Pre-loaders";
 	public const string NetworkInfo = "Network Info";
 	public const string FirebaseAnalytics = "Firebase Analytics";
+	public const string FirebaseDynamicLinks = "Firebase Dynamic Links";
 
 	public const string CameraAPI = "Camera";
 	public const string Gallery = "Gallery";

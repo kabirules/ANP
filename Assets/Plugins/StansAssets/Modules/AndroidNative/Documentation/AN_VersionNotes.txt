@@ -1,3 +1,84 @@
+9.10/24
+NEW!
+SignOut API added for Google Play Services Connect
+Google Play Services updated to version 11.4.2
+
+Fixes:
+Android billing errors fix
+Google Play OAuth Token request fix
+
+Overall performance improvements
+Compatibility updates & fixes
+
+9.9/22
+NEW!
+Facebook SDK v7.10.0 compatibility update
+GoogleApiClient PROFILE scope added to Google Play Services login
+
+Fixes:
+Billing Error refreshing inventory with more than 20 products FIX
+Compilation error in new clean project because of 'tools:' attributes in <application> tag FIX
+Native e-mail sharing ignore the 'To' addresses FIX
+
+9.8/21
+NEW!
+Firebase Dynamic Links API
+Google Play Services updated to version 11.0.2
+Score Tag option added to SubmitScore API
+
+Fixes:
+NullPointerException in BillingHelper.querySkuDetails(BillingHelper.java:842) FIX
+Show On Load AdMob banner option ignored FIX
+GetExternalStoragePath API improvement
+
+Overall performance improvements
+Compatibility updates & fixes
+
+9.7/20
+Fixes:
+StartShareIntent multiple filters selection fix
+Real-Time Multiplayer improved bytes to string convertion
+AdMob banners are clickable but not visible fix
+Local Notifications cahing issue fix
+
+Overall performance improvements
+Compatibility updates & fixes
+
+9.6/19
+NEW!
+Google Fit API
+Google Play Services updated to version 10.2.1
+android.permission.GET_TASKS was deprecated and is NO longer required
+
+Fixes:
+Local Notification rescheduled after device reboot issue fix
+Real-Time Multiplayer ActionWatingRoomIntentClosed event callback fix
+
+Overall performance improvements
+Compatibility updates & fixes
+
+9.5/18
+NEW! Local Notifications will be scheduled in time even after device reboot
+Repeated Local Notifications detailed doc description added
+
+Overall performance improvements
+Compatibility updates & fixes
+
+Fixes:
+Google Play Services - OnPlayerScoreUpdated multiple time call fix
+GooglePlayUtils.Instance.GetAdvertisingId crash fixed on Amazon platform
+GcmIntentService minor fixes
+
+9.4/17
+Google Play Services updated to version 10.0.1
+
+Fixes:
+Editor warnings fixes
+Plugin's Resources are included in the final app build by default
+
+Overall performance improvements
+Compatibility updates & fixes
+
 9.3
 NEW! AN_Storage features added. APIs set:
 * void Save (string key, string data)

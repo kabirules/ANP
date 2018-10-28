@@ -96,4 +96,15 @@ public static class AN_Storage
 		#endif
 	}
 
+	public static void RemoveData (string key)
+	{
+		#if UNITY_ANDROID && !UNITY_EDITOR
+		AndroidNative.RemoveData (key);
+		#else
+		if (PlayerPrefs.HasKey (key)) {
+			PlayerPrefs.DeleteKey(key);
+		}
+		#endif
+	}
+
 }

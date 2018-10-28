@@ -22,6 +22,7 @@ public class GPScore  {
 
 	private string _playerId;
 	private string _leaderboardId;
+	private string _tag = string.Empty;
 
 	private GPCollectionType _collection;
 	private GPBoardTimeSpan _timeSpan;
@@ -33,17 +34,16 @@ public class GPScore  {
 	//--------------------------------------
 
 
-	public GPScore(long vScore, int vRank, GPBoardTimeSpan vTimeSpan, GPCollectionType sCollection, string lid, string pid) {
+	public GPScore(long vScore, int vRank, GPBoardTimeSpan vTimeSpan, GPCollectionType sCollection, string lid, string pid, string tag) {
 		_score = vScore;
 		_rank = vRank;
 
 		_playerId = pid;
 		_leaderboardId = lid;
-	
+		_tag = tag;
 
 		_timeSpan  = vTimeSpan;
 		_collection = sCollection;
-
 	}
 
 
@@ -95,8 +95,11 @@ public class GPScore  {
 		}
 	}
 
-
-
+	public string Tag {
+		get {
+			return _tag;
+		}
+	}
 
 	[System.Obsolete("playerId is deprectaed, plase use PlayerId instead")]
 	public string playerId {

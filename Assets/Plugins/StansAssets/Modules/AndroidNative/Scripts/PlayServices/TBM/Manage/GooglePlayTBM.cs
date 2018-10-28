@@ -16,7 +16,7 @@ public class GooglePlayTBM : SA.Common.Pattern.Singleton<GooglePlayTBM>
 	public static event Action<GP_TBM_UpdateMatchResult> ActionMatchTurnFinished = delegate { };
 	
 	
-	public static event Action<GP_TBM_MatchReceivedResult> ActionMatchReceived = delegate { };
+	public static event Action<GP_TBM_UpdateMatchResult> ActionMatchReceived = delegate { };
 	public static event Action<GP_TBM_MatchRemovedResult> ActionMatchRemoved = delegate { };
 	
 	public static event Action<AndroidActivityResult> ActionMatchCreationCanceled = delegate { };
@@ -401,6 +401,7 @@ public class GooglePlayTBM : SA.Common.Pattern.Singleton<GooglePlayTBM>
 		result.Match = match;
 		
 		ActionMatchUpdated(result);
+		ActionMatchReceived (result);
 		
 		//ActionMatchReceived(new GP_TBM_MatchReceivedResult(ParceMatchInfo(data)));
 	}

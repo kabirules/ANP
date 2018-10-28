@@ -108,7 +108,7 @@ public class AN_InAppAndroidClient : MonoBehaviour, AN_InAppClient {
 			Connect(AndroidNativeSettings.Instance.base64EncodedPublicKey);
 			_IsConnectingToServiceInProcess = true;
 		} else {
-			Debug.LogError("Replace base64EncodedPublicKey in Androdi Native Setting menu");
+			Debug.LogError("Replace base64EncodedPublicKey in Android Native Settings menu");
 		}
 	}
 	

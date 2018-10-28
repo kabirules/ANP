@@ -13,7 +13,7 @@ public interface SP_FB_API  {
 	void API(string query, FB_HttpMethod method, SPFacebook.FB_Delegate callback);
 	void API(string query, FB_HttpMethod method, SPFacebook.FB_Delegate callback, WWWForm form);
 
-
+    void AppInvite(string appLinkUrl, string previewImgUrl);
 	void AppRequest(string message, FB_RequestActionType actionType, string objectId, string[] to, string data = "", string title = "");
 	void AppRequest(string message, FB_RequestActionType actionType, string objectId, List<object> filters = null, string[] excludeIds = null, int? maxRecipients = null, string data = "", string title = "");
 	void AppRequest(string message, string[] to = null, List<object> filters = null, string[] excludeIds = null, int? maxRecipients = null, string data = "", string title = "");

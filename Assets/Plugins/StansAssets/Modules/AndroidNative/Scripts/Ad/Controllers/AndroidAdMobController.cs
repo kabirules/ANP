@@ -15,10 +15,7 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 
 	
 	private bool _IsInited = false ;
-	private Dictionary<int, AndroidADBanner> _banners; 
-
-	private bool _IsEditorTestingEnabled = true;
-	private int _EditorFillRate = 100;
+	private Dictionary<int, AndroidADBanner> _banners;
 	
 	private string _BannersUunitId;
 	private string _InterstisialUnitId;
@@ -33,12 +30,12 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 	public event Action OnRewardedVideoAdOpened 				= delegate {};
 	public event Action OnRewardedVideoStarted 					= delegate {};
 
-	public event Action OnInterstitialLoaded 			= delegate {};
-	public event Action OnInterstitialFailedLoading 	= delegate {};
-	public event Action OnInterstitialOpened 			= delegate {};
-	public event Action OnInterstitialClosed 			= delegate {};
-	public event Action OnInterstitialLeftApplication 	= delegate {};
-	public event Action<string> OnAdInAppRequest		= delegate {};
+	public event Action OnInterstitialLoaded 			    = delegate {};
+    public event Action<int> OnInterstitialFailedLoading 	= delegate {};
+	public event Action OnInterstitialOpened 			    = delegate {};
+	public event Action OnInterstitialClosed 			    = delegate {};
+	public event Action OnInterstitialLeftApplication 	    = delegate {};
+	public event Action<string> OnAdInAppRequest		    = delegate {};
 
 
 
@@ -75,12 +72,6 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 
 		_banners =  new Dictionary<int, AndroidADBanner>();
 
-		if (IsEditorTestingEnabled) {
-			Debug.Log("Initialized with Editor Testing Profile");
-			SA_EditorAd.Instance.SetFillRate(_EditorFillRate);
-			return;
-		}
-
 		AN_GoogleAdProxy.InitMobileAd(ad_unit_id);
 	}
 
@@ -93,11 +84,6 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 		
 		Init(banners_unit_id);
 		SetInterstisialsUnitID(interstisial_unit_id);
-	}
-
-	public void InitEditorTesting (bool isTestingEnabled, int editorFillRate) {
-		_IsEditorTestingEnabled = isTestingEnabled;
-		_EditorFillRate = editorFillRate;
 	}
 
 	public void SetBannersUnitID(string ad_unit_id) {
@@ -244,17 +230,9 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 		}
 	}
 
-	private bool _InterstitialShowOnLoad = false;
 	public void StartInterstitialAd() {
 		if(!_IsInited) {
 			Debug.LogWarning ("StartInterstitialAd shoudl be called only after Init function. Call ignored");
-			return;
-		}
-
-		if (IsEditorTestingEnabled) {
-			_InterstitialShowOnLoad = true;
-			SA_EditorAd.OnInterstitialLoadComplete += HandleOnInterstitialLoadComplete_Editor;
-			SA_EditorAd.Instance.LoadInterstitial();
 			return;
 		}
 
@@ -267,27 +245,7 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 			return;
 		}
 
-		if (IsEditorTestingEnabled) {
-			SA_EditorAd.OnInterstitialLoadComplete += HandleOnInterstitialLoadComplete_Editor;
-			SA_EditorAd.Instance.LoadInterstitial();
-			return;
-		}
-
 		AN_GoogleAdProxy.LoadInterstitialAd();
-	}
-
-	private void HandleOnInterstitialLoadComplete_Editor (bool success)
-	{
-		SA_EditorAd.OnInterstitialLoadComplete -= HandleOnInterstitialLoadComplete_Editor;
-		if (success) {
-			OnInterstitialLoaded();
-			if (_InterstitialShowOnLoad) {
-				_InterstitialShowOnLoad = false;
-				ShowInterstitialAd();
-			}
-		} else {
-			OnInterstitialFailedLoading();
-		}
 	}
 	
 	public void ShowInterstitialAd() {
@@ -296,37 +254,15 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 			return;
 		}
 
-		if (IsEditorTestingEnabled) {
-			SA_EditorAd.OnInterstitialLeftApplication += HandleOnInterstitialLeftApplication_Editor;
-			SA_EditorAd.OnInterstitialFinished += HandleOnInterstitialFinished_Editor;
-			SA_EditorAd.Instance.ShowInterstitial();
-			OnInterstitialOpened();
-			return;
-		}
-
 		AN_GoogleAdProxy.ShowInterstitialAd();
 	}
 
-	void HandleOnInterstitialFinished_Editor (bool isRewarded)
-	{
-		SA_EditorAd.OnInterstitialLeftApplication -= HandleOnInterstitialLeftApplication_Editor;
-		SA_EditorAd.OnInterstitialFinished -= HandleOnInterstitialFinished_Editor;
-		OnInterstitialClosed();
-	}
-
-	void HandleOnInterstitialLeftApplication_Editor ()
-	{
-		OnInterstitialLeftApplication();
-	}
-
-	private bool _RewardedVideoShowOnLoad = false;
 	public void StartRewardedVideo() {
 		if(!_IsInited) {
 			Debug.LogWarning ("StartRewardedVideo shoudl be called only after Init function. Call ignored");
 			return;
 		}
 
-		_RewardedVideoShowOnLoad = true;
 		LoadRewardedVideo ();
 	}
 
@@ -335,30 +271,8 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 			Debug.LogWarning ("ShowRewardedVideo shoudl be called only after Init function. Call ignored");
 			return;
 		}
-
-		if (IsEditorTestingEnabled) {
-			SA_EditorAd.OnVideoLoadComplete += HandleOnVideoLoadComplete_Editor;
-			SA_EditorAd.Instance.LoadVideo();
-			return;
-		}
 		
 		AN_GoogleAdProxy.LoadRewardedVideo();
-	}
-
-	void HandleOnVideoLoadComplete_Editor (bool success)
-	{
-		SA_EditorAd.OnVideoLoadComplete -= HandleOnVideoLoadComplete_Editor;
-
-		if (success) {
-			OnRewardedVideoLoaded();
-
-			if (_RewardedVideoShowOnLoad) {
-				_RewardedVideoShowOnLoad = false;
-				ShowRewardedVideo ();
-			}
-		} else {
-			OnRewardedVideoAdFailedToLoad(-1);
-		}
 	}
 
 	public void ShowRewardedVideo() {
@@ -366,28 +280,8 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 			Debug.LogWarning ("ShowRewardedVideo shoudl be called only after Init function. Call ignored");
 			return;
 		}
-
-		if (IsEditorTestingEnabled) {
-			SA_EditorAd.OnVideoLeftApplication += HandleOnVideoLeftApplication_Editor;
-			SA_EditorAd.OnVideoFinished += HandleOnVideoFinished_Editor;
-			SA_EditorAd.Instance.ShowVideo();
-			OnRewardedVideoAdOpened();
-			return;
-		}
 		
 		AN_GoogleAdProxy.ShowRewardedVideo();
-	}
-
-	void HandleOnVideoFinished_Editor (bool isRewarded)
-	{
-		SA_EditorAd.OnVideoLeftApplication -= HandleOnVideoLeftApplication_Editor;
-		SA_EditorAd.OnVideoFinished -= HandleOnVideoFinished_Editor;
-		OnRewardedVideoAdClosed();
-	}
-
-	void HandleOnVideoLeftApplication_Editor ()
-	{
-		OnRewardedVideoAdLeftApplication();
 	}
 
 	public void RecordInAppResolution(GADInAppResolution resolution) {
@@ -407,7 +301,6 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 		}
 	}
 
-
 	public List<GoogleMobileAdBanner> banners {
 		get {
 
@@ -421,8 +314,6 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 			}
 
 			return allBanners;
-
-
 		}
 	}
 
@@ -447,12 +338,6 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 	public string RewardedVideoAdUnitId {
 		get {
 			return _RewardedVideoAdUnitId;
-		}
-	}
-
-	public bool IsEditorTestingEnabled {
-		get {
-			return SA_EditorTesting.IsInsideEditor && _IsEditorTestingEnabled;
 		}
 	}
 
@@ -522,8 +407,8 @@ public class AndroidAdMobController : SA.Common.Pattern.Singleton<AndroidAdMobCo
 		OnInterstitialLoaded();
 	}
 	
-	private void OnInterstitialAdFailedToLoad() {
-		OnInterstitialFailedLoading();;
+	private void OnInterstitialAdFailedToLoad(string errorCode) {
+        OnInterstitialFailedLoading(Int32.Parse(errorCode));
 	}
 	
 	private void OnInterstitialAdOpened() {

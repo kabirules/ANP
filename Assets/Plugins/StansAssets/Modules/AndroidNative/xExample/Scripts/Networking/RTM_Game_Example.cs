@@ -36,6 +36,7 @@ public class RTM_Game_Example : AndroidNativeExampleBase {
 		GooglePlayInvitationManager.ActionInvitationReceived += OnInvite;
 		GooglePlayInvitationManager.ActionInvitationAccepted += ActionInvitationAccepted;
 		GooglePlayRTM.ActionRoomCreated += OnRoomCreated;
+		GooglePlayRTM.ActionWatingRoomIntentClosed += WaitingUIClosed;
 
 		GooglePlayConnection.ActionPlayerConnected +=  OnPlayerConnected;
 		GooglePlayConnection.ActionPlayerDisconnected += OnPlayerDisconnected;
@@ -52,6 +53,10 @@ public class RTM_Game_Example : AndroidNativeExampleBase {
 		GooglePlayRTM.ActionDataRecieved += OnGCDataReceived;
 
 
+	}
+
+	private void WaitingUIClosed(AndroidActivityResult result) {
+		Debug.Log ("[WaitingUIClosed] result "  + result.code + " status " + result.IsSucceeded.ToString());
 	}
 
 	private void ConncetButtonPress() {

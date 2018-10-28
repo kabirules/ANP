@@ -9,8 +9,6 @@ using System.Collections.Generic;
 using Facebook.Unity;
 #endif
 
-
-
 public class SP_FB_API_v7 : SP_FB_API {
 
     private const string PUBLISH_PERMISSION_STRING = "publish_actions";
@@ -148,16 +146,26 @@ public class SP_FB_API_v7 : SP_FB_API {
 		
 	}
 
+    public void AppInvite(string appLink, string imgLink) {
+#if FBV7_API_ENABLED
+        FB.Mobile.AppInvite(new System.Uri(appLink), new System.Uri(imgLink), AppInviteResult);
+#endif
+    }
+
+#if FBV7_API_ENABLED
+    private void AppInviteResult(IAppInviteResult result) {
+        FB_AppInviteResult res = new FB_AppInviteResult(result.Cancelled, result.RawResult, result.Error, result.ResultDictionary);
+        SPFacebook.Instance.AppInviteResultCallback(res);
+    }
+#endif
+
+    //--------------------------------------
+    //  Get / Set
+    //--------------------------------------
 
 
 
-	//--------------------------------------
-	//  Get / Set
-	//--------------------------------------
-
-
-
-	public bool IsLoggedIn {
+    public bool IsLoggedIn {
 		get {
 			#if FBV7_API_ENABLED
 			return FB.IsLoggedIn;

@@ -27,8 +27,35 @@ namespace SA.Common.Editor {
 		// Android Native
 		//--------------------------------------
 
-		
-		public static bool Is_AN_Installed {
+        public static bool Is_SpotifyInstalled {
+            get {
+                return SA.Common.Util.Files.IsFileExists(SA.Common.Config.SPOTIFY_VERSION_INFO_PATH);
+            }
+        }
+
+        public static int Spotify_Version
+        {
+            get
+            {
+                return GetVersionCode(SA.Common.Config.SPOTIFY_VERSION_INFO_PATH);
+            }
+        }
+
+        public static int Spotify_MagorVersion
+        {
+            get
+            {
+                return GetMagorVersionCode(SA.Common.Config.SPOTIFY_VERSION_INFO_PATH);
+            }
+        }
+
+        public static string Spotify_StringVersionId {
+			get {
+				return GetStringVersionId(SA.Common.Config.SPOTIFY_VERSION_INFO_PATH);
+			}
+		}
+
+        public static bool Is_AN_Installed {
 			get { 
 				return SA.Common.Util.Files.IsFileExists(SA.Common.Config.AN_VERSION_INFO_PATH);
 			}
@@ -56,7 +83,7 @@ namespace SA.Common.Editor {
 		//--------------------------------------
 		// Mobile Social 
 		//--------------------------------------
-		
+
 
 		public static bool Is_MSP_Installed {
 			get {
@@ -72,7 +99,7 @@ namespace SA.Common.Editor {
 		}
 
 		public static int MSP_MagorVersion {
-			
+
 			get {
 				return GetMagorVersionCode(SA.Common.Config.MSP_VERSION_INFO_PATH);
 			}
@@ -87,13 +114,13 @@ namespace SA.Common.Editor {
 		//--------------------------------------
 		// Ultimate Mobile  
 		//--------------------------------------
-		 
+
 		public static bool Is_UM_Installed {
 			get {
 				return SA.Common.Util.Files.IsFileExists(SA.Common.Config.UM_VERSION_INFO_PATH);
 			} 
 		}
-		
+
 		public static int UM_Version {
 			get {
 				return GetVersionCode(SA.Common.Config.UM_VERSION_INFO_PATH);
@@ -122,7 +149,7 @@ namespace SA.Common.Editor {
 				return SA.Common.Util.Files.IsFileExists(SA.Common.Config.GMA_VERSION_INFO_PATH);
 			} 
 		}
-		
+
 		public static int GMA_Version {
 			get {
 				return GetVersionCode(SA.Common.Config.GMA_VERSION_INFO_PATH);
@@ -148,19 +175,19 @@ namespace SA.Common.Editor {
 				return SA.Common.Util.Files.IsFileExists(SA.Common.Config.MNP_VERSION_INFO_PATH);
 			} 
 		}
-		
+
 		public static int MNP_Version {
 			get {
 				return GetVersionCode(SA.Common.Config.MNP_VERSION_INFO_PATH);
 			} 
 		}
-		
+
 		public static int MNP_MagorVersion {
 			get {
 				return GetMagorVersionCode(SA.Common.Config.MNP_VERSION_INFO_PATH);
 			} 
 		}
-		
+
 		public static string MNP_StringVersionId {
 			get {
 				return GetStringVersionId(SA.Common.Config.MNP_VERSION_INFO_PATH);
@@ -176,7 +203,7 @@ namespace SA.Common.Editor {
 				return SA.Common.Util.Files.IsFileExists(SA.Common.Config.ISN_VERSION_INFO_PATH);
 			} 
 		}
-		
+
 		public static int ISN_Version {
 			get {
 				return GetVersionCode(SA.Common.Config.ISN_VERSION_INFO_PATH);
@@ -196,18 +223,18 @@ namespace SA.Common.Editor {
 			}
 		}
 
-		
+
 		//--------------------------------------
 		// Utilities
 		//--------------------------------------
 
 		public static int ParceMagorVersion(string stringVersionId) {
-			string[] versions = stringVersionId.Split (new char[] {'.'});
-			int intVersion = Int32.Parse(versions[0]) * 100 + Int32.Parse(versions[1]) * 10;
+			string[] versions = stringVersionId.Split (new char[] {'.', '/'});
+			int intVersion = Int32.Parse(versions[0]) * 100;
 			return  intVersion;
 		} 
 
-		
+
 		private static int GetMagorVersionCode(string versionFilePath) {
 			string stringVersionId = SA.Common.Util.Files.Read (versionFilePath);
 			return ParceMagorVersion(stringVersionId);
@@ -216,8 +243,8 @@ namespace SA.Common.Editor {
 
 
 		public static int ParceVersion(string stringVersionId) {
-			string[] versions = stringVersionId.Split (new char[] {'.'});
-			int intVersion = Int32.Parse(versions[0]) * 100 + Int32.Parse(versions[1]) * 10 + (versions.Length == 3 ? Int32.Parse(versions[2]) : 0);
+			string[] versions = stringVersionId.Split (new char[] {'.', '/'});
+			int intVersion = Int32.Parse(versions[0]) * 100 + Int32.Parse(versions[1]) * 10;
 			return  intVersion;
 		} 
 
@@ -257,7 +284,7 @@ namespace SA.Common.Editor {
 				}
 
 				if(SA.Common.Util.Files.IsFolderExists(SA.Common.Config.MODULS_PATH)) {
-					
+
 					string[] modules = SA.Common.Util.Files.GetFoldersAt (SA.Common.Config.MODULS_PATH);
 					foreach(string pluginPath in modules) {
 						string pluginName = System.IO.Path.GetFileName (pluginPath);
@@ -265,7 +292,7 @@ namespace SA.Common.Editor {
 					}
 				}
 
-		
+
 
 
 				return allPluginsInstalled;
@@ -275,7 +302,7 @@ namespace SA.Common.Editor {
 
 
 	}
-		
+
 }
 
 #endif

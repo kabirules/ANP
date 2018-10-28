@@ -68,7 +68,7 @@ public class AndroidNativeUtility : SA.Common.Pattern.Singleton<AndroidNativeUti
 		StringBuilder builder = new StringBuilder();
 		foreach (KeyValuePair<string, string> extra in extras) {
 			builder.AppendFormat("{0}{1}{2}", extra.Key, AndroidNative.DATA_SPLITTER, extra.Value);
-			builder.Append(AndroidNative.DATA_SPLITTER2);
+			builder.Append(AndroidNative.DATA_SPLITTER3);
 		}
 		builder.Append(AndroidNative.DATA_EOF);
 

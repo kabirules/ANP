@@ -178,6 +178,8 @@ namespace SA.Manifest {
 				string k = key;
 				if (key.Contains("android:")) {
 					k = key.Replace("android:", "android___");
+				} else if (key.Contains("tools:")) {
+					k = key.Replace("tools:", "tools___");
 				}
 				XmlAttribute attr = doc.CreateAttribute (k);
 				attr.Value = template.Values[key];

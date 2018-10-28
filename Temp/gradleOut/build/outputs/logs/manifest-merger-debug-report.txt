@@ -1,0 +1,484 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:2:1-71:12
+	package
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:2:70-98
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:2:171-196
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:2:147-170
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:2:197-237
+	android:theme
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:2:99-146
+supports-screens
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:3:3-163
+MERGED from [gradleOut:AN_Res:unspecified] C:\Development\Unity\ANP\Temp\gradleOut\AN_Res\build\intermediates\bundles\default\AndroidManifest.xml:13:5-18:40
+	android:largeScreens
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:3:78-105
+	android:smallScreens
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:3:21-48
+	android:normalScreens
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:3:49-77
+	android:xlargeScreens
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:3:106-134
+	android:anyDensity
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:3:135-160
+uses-sdk
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:4:3-45
+MERGED from [:androidnative:] C:\Users\usuario\.android\build-cache\c05a2676ffdef707363317b676a0fdd3e580ba2f\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:an_billing:] C:\Users\usuario\.android\build-cache\70d73cf5d4519c5551c229f4437de4ba4a0c0937\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:an_googleplay:] C:\Users\usuario\.android\build-cache\a71951f16dabbe6752d2d64354f51bb414b3f4eb\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:an_social:] C:\Users\usuario\.android\build-cache\8656cfe54620714a98a3a9594c21091a9f5f097e\output\AndroidManifest.xml:7:5-9:41
+MERGED from [:play-services-ads-lite:] C:\Users\usuario\.android\build-cache\eb080d524bf4b09448c91b794e93970023d6109a\output\AndroidManifest.xml:22:5-43
+MERGED from [:play-services-ads:] C:\Users\usuario\.android\build-cache\49029108c8939ca9b6a620b4c58f7c329f0293d0\output\AndroidManifest.xml:17:5-94
+MERGED from [:play-services-analytics-impl:] C:\Users\usuario\.android\build-cache\432cb5a13abf8158e27b7b2ce2ecccd7085560a0\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-auth-base:] C:\Users\usuario\.android\build-cache\43f620bb140602432e4f57b773f4fb5a9286f634\output\AndroidManifest.xml:4:5-43
+MERGED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-base:] C:\Users\usuario\.android\build-cache\aed0cf4d92027888a9b5c4a6b97dc751b034c2fa\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-basement:] C:\Users\usuario\.android\build-cache\a29c5ca1ea77d67e2f40836f45be40849ba275e0\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-drive:] C:\Users\usuario\.android\build-cache\d071de6cdfb2c7b1f332f79c1674b4ad78a804f6\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-games:] C:\Users\usuario\.android\build-cache\51791f9612777e8c003957c010d9dd5e7ce562f3\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-gcm:] C:\Users\usuario\.android\build-cache\e8000387bb5fb63bb64021f66e3025861d717166\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-iid:] C:\Users\usuario\.android\build-cache\7712a0d207b963a495c986c1375050f70e1493b3\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-plus:] C:\Users\usuario\.android\build-cache\a4e9e29f02d6f22d020448b56d9b302d2432ad46\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-safetynet:] C:\Users\usuario\.android\build-cache\8c0efd79581d5992b4aa17c539f1099e00335164\output\AndroidManifest.xml:17:5-43
+MERGED from [:play-services-tasks:] C:\Users\usuario\.android\build-cache\20733c06c2030d049dfe810f1d8ec2a762d4a1ea\output\AndroidManifest.xml:3:5-43
+MERGED from [:support-v4-24.1.1:] C:\Users\usuario\.android\build-cache\dd3a17b1eae982372e48fa117c5f645f10d90ca1\output\AndroidManifest.xml:21:5-23:54
+MERGED from [gradleOut:AN_Res:unspecified] C:\Development\Unity\ANP\Temp\gradleOut\AN_Res\build\intermediates\bundles\default\AndroidManifest.xml:9:5-11:41
+	tools:overrideLibrary
+		ADDED from [:play-services-ads:] C:\Users\usuario\.android\build-cache\49029108c8939ca9b6a620b4c58f7c329f0293d0\output\AndroidManifest.xml:17:42-92
+	android:targetSdkVersion
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:4:13-42
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+		INJECTED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml
+permission#com.javifont.dobrika.permission.C2D_MESSAGE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:5:3-112
+	android:protectionLevel
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:5:74-109
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:5:15-73
+application
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:6:3-52:17
+MERGED from [:androidnative:] C:\Users\usuario\.android\build-cache\c05a2676ffdef707363317b676a0fdd3e580ba2f\output\AndroidManifest.xml:11:5-16:19
+MERGED from [:an_billing:] C:\Users\usuario\.android\build-cache\70d73cf5d4519c5551c229f4437de4ba4a0c0937\output\AndroidManifest.xml:11:5-16:19
+MERGED from [:an_googleplay:] C:\Users\usuario\.android\build-cache\a71951f16dabbe6752d2d64354f51bb414b3f4eb\output\AndroidManifest.xml:11:5-16:19
+MERGED from [:an_social:] C:\Users\usuario\.android\build-cache\8656cfe54620714a98a3a9594c21091a9f5f097e\output\AndroidManifest.xml:11:5-16:19
+MERGED from [:play-services-ads-lite:] C:\Users\usuario\.android\build-cache\eb080d524bf4b09448c91b794e93970023d6109a\output\AndroidManifest.xml:23:5-26:19
+MERGED from [:play-services-analytics-impl:] C:\Users\usuario\.android\build-cache\432cb5a13abf8158e27b7b2ce2ecccd7085560a0\output\AndroidManifest.xml:26:5-19
+MERGED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:26:5-31:19
+MERGED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:19:5-26:19
+MERGED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:19:5-25:19
+MERGED from [:play-services-base:] C:\Users\usuario\.android\build-cache\aed0cf4d92027888a9b5c4a6b97dc751b034c2fa\output\AndroidManifest.xml:18:5-20:19
+MERGED from [:play-services-basement:] C:\Users\usuario\.android\build-cache\a29c5ca1ea77d67e2f40836f45be40849ba275e0\output\AndroidManifest.xml:19:5-21:19
+MERGED from [:play-services-drive:] C:\Users\usuario\.android\build-cache\d071de6cdfb2c7b1f332f79c1674b4ad78a804f6\output\AndroidManifest.xml:18:5-19
+MERGED from [:play-services-games:] C:\Users\usuario\.android\build-cache\51791f9612777e8c003957c010d9dd5e7ce562f3\output\AndroidManifest.xml:18:5-19
+MERGED from [:play-services-gcm:] C:\Users\usuario\.android\build-cache\e8000387bb5fb63bb64021f66e3025861d717166\output\AndroidManifest.xml:23:5-19
+MERGED from [:play-services-iid:] C:\Users\usuario\.android\build-cache\7712a0d207b963a495c986c1375050f70e1493b3\output\AndroidManifest.xml:23:5-19
+MERGED from [:play-services-plus:] C:\Users\usuario\.android\build-cache\a4e9e29f02d6f22d020448b56d9b302d2432ad46\output\AndroidManifest.xml:18:5-19
+MERGED from [:play-services-safetynet:] C:\Users\usuario\.android\build-cache\8c0efd79581d5992b4aa17c539f1099e00335164\output\AndroidManifest.xml:18:5-19
+MERGED from [:play-services-tasks:] C:\Users\usuario\.android\build-cache\20733c06c2030d049dfe810f1d8ec2a762d4a1ea\output\AndroidManifest.xml:4:5-19
+MERGED from [:support-v4-24.1.1:] C:\Users\usuario\.android\build-cache\dd3a17b1eae982372e48fa117c5f645f10d90ca1\output\AndroidManifest.xml:25:5-20
+MERGED from [gradleOut:AN_Res:unspecified] C:\Development\Unity\ANP\Temp\gradleOut\AN_Res\build\intermediates\bundles\default\AndroidManifest.xml:20:5-23:19
+	android:label
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:6:16-48
+	android:debuggable
+		ADDED from [gradleOut:AN_Res:unspecified] C:\Development\Unity\ANP\Temp\gradleOut\AN_Res\build\intermediates\bundles\default\AndroidManifest.xml:21:9-34
+	android:allowBackup
+		ADDED from [:androidnative:] C:\Users\usuario\.android\build-cache\c05a2676ffdef707363317b676a0fdd3e580ba2f\output\AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from [:androidnative:] C:\Users\usuario\.android\build-cache\c05a2676ffdef707363317b676a0fdd3e580ba2f\output\AndroidManifest.xml:13:9-45
+	android:banner
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:6:71-108
+	android:theme
+		ADDED from [:androidnative:] C:\Users\usuario\.android\build-cache\c05a2676ffdef707363317b676a0fdd3e580ba2f\output\AndroidManifest.xml:15:9-40
+	android:isGame
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:6:49-70
+meta-data#com.google.android.gms.games.APP_ID
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:8:5-100
+	android:value
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:8:67-97
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:8:16-66
+meta-data#com.google.android.gms.version
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:9:5-118
+MERGED from [:play-services-basement:] C:\Users\usuario\.android\build-cache\a29c5ca1ea77d67e2f40836f45be40849ba275e0\output\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:9:62-115
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:9:16-61
+meta-data#com.google.android.gms.appstate.APP_ID
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:10:5-103
+	android:value
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:10:70-100
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:10:16-69
+receiver#com.androidnative.gcm.GcmBroadcastReceiver
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:11:5-17:16
+	android:exported
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:11:73-96
+	android:permission
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:11:97-157
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:11:15-72
+intent-filter#com.androidnative.push.intent.OPEN+com.google.android.c2dm.intent.RECEIVE+com.javifont.dobrika
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:12:7-16:23
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:13:9-73
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:13:17-70
+action#com.androidnative.push.intent.OPEN
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:14:9-69
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:14:17-66
+category#com.javifont.dobrika
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:15:9-57
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:15:19-54
+receiver#com.androidnative.features.notifications.LocalNotificationReceiver
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:18:5-24:16
+	android:enabled
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:18:97-119
+	android:exported
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:18:120-143
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:18:15-96
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.category.DEFAULT+com.androidnative.local.intent.OPEN
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:19:7-23:23
+action#com.androidnative.local.intent.OPEN
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:20:9-70
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:20:17-67
+action#android.intent.action.BOOT_COMPLETED
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:21:9-71
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:21:17-68
+category#android.intent.category.DEFAULT
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:22:9-68
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:22:19-65
+service#com.androidnative.gcm.GcmIntentService
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:25:5-70
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:25:14-67
+service#com.androidnative.features.notifications.LocalNotificationService
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:26:14-94
+activity#com.unity3d.player.UnityPlayerNativeActivity
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:27:5-35:16
+	android:screenOrientation
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:27:108-146
+	android:label
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:27:75-107
+	android:hardwareAccelerated
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:27:361-396
+	android:launchMode
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:27:147-178
+	android:configChanges
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:27:179-360
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:27:15-74
+meta-data#unityplayer.UnityActivity
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:28:7-82
+	android:value
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:28:59-79
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:28:18-58
+meta-data#unityplayer.ForwardNativeEventsToDalvik
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:29:7-97
+	android:value
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:29:73-94
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:29:18-72
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER+android.intent.category.LEANBACK_LAUNCHER
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:30:7-34:23
+action#android.intent.action.MAIN
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:31:9-61
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:31:17-58
+category#android.intent.category.LAUNCHER
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:32:9-69
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:32:19-66
+category#android.intent.category.LEANBACK_LAUNCHER
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:33:9-78
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:33:19-75
+activity#com.androidnative.AndroidNativeProxy
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:36:5-352
+	android:label
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:36:99-131
+	android:launchMode
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:36:67-98
+	android:configChanges
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:36:132-289
+	android:theme
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:36:290-349
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:36:15-66
+activity#com.androidnative.features.social.common.SocialProxyActivity
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:37:5-44:16
+	android:label
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:37:123-155
+	android:launchMode
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:37:91-122
+	android:configChanges
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:37:156-313
+	android:theme
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:37:314-373
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:37:15-90
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:38:7-43:23
+action#android.intent.action.VIEW
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:39:9-61
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:39:17-58
+category#android.intent.category.BROWSABLE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:41:9-70
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:41:19-67
+data
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:42:9-76
+	android:host
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:42:38-73
+	android:scheme
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:42:15-37
+activity#com.androidnative.OAuthProxyActivity
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:45:5-352
+	android:label
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:45:99-131
+	android:launchMode
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:45:67-98
+	android:configChanges
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:45:132-289
+	android:theme
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:45:290-349
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:45:15-66
+activity#com.androidnative.billing.core.AN_BillingProxyActivity
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:46:5-370
+	android:label
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:46:117-149
+	android:launchMode
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:46:85-116
+	android:configChanges
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:46:150-307
+	android:theme
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:46:308-367
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:46:15-84
+activity#com.androidnative.gms.core.GooglePlaySupportActivity
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:47:5-368
+	android:label
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:47:115-147
+	android:launchMode
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:47:83-114
+	android:configChanges
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:47:148-305
+	android:theme
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:47:306-365
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:47:15-82
+activity#com.google.android.gms.ads.AdActivity
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:48:5-254
+MERGED from [:play-services-ads-lite:] C:\Users\usuario\.android\build-cache\eb080d524bf4b09448c91b794e93970023d6109a\output\AndroidManifest.xml:25:9-257
+	android:exported
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:48:227-251
+	android:configChanges
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:48:68-177
+	android:theme
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:48:178-226
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:48:15-67
+meta-data#unity.build-id
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:49:5-101
+	android:value
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:49:46-98
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:49:16-45
+meta-data#unity.splash-mode
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:50:5-69
+	android:value
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:50:49-66
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:50:16-48
+meta-data#unity.splash-enable
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:51:5-74
+	android:value
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:51:51-71
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:51:16-50
+uses-permission#android.permission.INTERNET
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:53:3-65
+MERGED from [:play-services-ads-lite:] C:\Users\usuario\.android\build-cache\eb080d524bf4b09448c91b794e93970023d6109a\output\AndroidManifest.xml:19:5-66
+MERGED from [:play-services-analytics-impl:] C:\Users\usuario\.android\build-cache\432cb5a13abf8158e27b7b2ce2ecccd7085560a0\output\AndroidManifest.xml:20:5-66
+MERGED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:20:5-66
+MERGED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:18:5-66
+MERGED from [:play-services-gcm:] C:\Users\usuario\.android\build-cache\e8000387bb5fb63bb64021f66e3025861d717166\output\AndroidManifest.xml:21:5-66
+MERGED from [:play-services-iid:] C:\Users\usuario\.android\build-cache\7712a0d207b963a495c986c1375050f70e1493b3\output\AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:53:20-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:54:3-79
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:54:20-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:55:3-77
+MERGED from [:play-services-ads-lite:] C:\Users\usuario\.android\build-cache\eb080d524bf4b09448c91b794e93970023d6109a\output\AndroidManifest.xml:20:5-78
+MERGED from [:play-services-analytics-impl:] C:\Users\usuario\.android\build-cache\432cb5a13abf8158e27b7b2ce2ecccd7085560a0\output\AndroidManifest.xml:21:5-78
+MERGED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:21:5-78
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:55:20-74
+uses-permission#com.android.vending.BILLING
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:56:3-65
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:56:20-62
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:57:3-80
+MERGED from [:play-services-gcm:] C:\Users\usuario\.android\build-cache\e8000387bb5fb63bb64021f66e3025861d717166\output\AndroidManifest.xml:20:5-81
+MERGED from [:play-services-iid:] C:\Users\usuario\.android\build-cache\7712a0d207b963a495c986c1375050f70e1493b3\output\AndroidManifest.xml:20:5-81
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:57:20-77
+uses-permission#com.javifont.dobrika.permission.C2D_MESSAGE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:58:3-81
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:58:20-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:59:3-66
+MERGED from [:play-services-analytics-impl:] C:\Users\usuario\.android\build-cache\432cb5a13abf8158e27b7b2ce2ecccd7085560a0\output\AndroidManifest.xml:24:5-67
+MERGED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:59:20-63
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:60:3-64
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:60:20-61
+uses-permission#android.permission.GET_TASKS
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:61:3-66
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:61:20-63
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:62:3-79
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:62:20-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:63:3-74
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:63:20-71
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:64:3-69
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:64:20-66
+uses-permission#com.android.vending.CHECK_LICENSE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:65:3-71
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:65:20-68
+uses-feature#0x00020000
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:66:3-52
+	android:glEsVersion
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:66:17-49
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:67:3-105
+	android:maxSdkVersion
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:67:76-102
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:67:20-75
+uses-feature#android.hardware.touchscreen
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:68:3-88
+	android:required
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:68:61-85
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:68:17-60
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:69:3-99
+	android:required
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:69:72-96
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:69:17-71
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:70:3-108
+	android:required
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:70:81-105
+	android:name
+		ADDED from C:\Development\Unity\ANP\Temp\gradleOut\src\main\AndroidManifest.xml:70:17-80
+receiver#com.google.android.gms.analytics.AnalyticsReceiver
+ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:27:9-28:20
+	android:enabled
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:27:85-107
+	android:exported
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:27:108-132
+	android:name
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:27:19-84
+service#com.google.android.gms.analytics.AnalyticsService
+ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:29:9-132
+	android:enabled
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:29:83-105
+	android:exported
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:29:106-130
+	android:name
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:29:18-82
+service#com.google.android.gms.analytics.AnalyticsJobService
+ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:30:9-192
+	android:enabled
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:30:143-165
+	android:exported
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:30:166-190
+	android:permission
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:30:86-142
+	android:name
+		ADDED from [:play-services-analytics:] C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\AndroidManifest.xml:30:18-85
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:20:9-25:20
+	android:exported
+		ADDED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:20:51-74
+	android:theme
+		ADDED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:20:75-121
+	android:name
+		ADDED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:20:19-50
+intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:21:13-24:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:22:17-89
+	android:name
+		ADDED from [:play-services-appinvite:] C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\AndroidManifest.xml:22:25-87
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [:play-services-auth:] C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\AndroidManifest.xml:24:18-63
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [:play-services-base:] C:\Users\usuario\.android\build-cache\aed0cf4d92027888a9b5c4a6b97dc751b034c2fa\output\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [:play-services-base:] C:\Users\usuario\.android\build-cache\aed0cf4d92027888a9b5c4a6b97dc751b034c2fa\output\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [:play-services-base:] C:\Users\usuario\.android\build-cache\aed0cf4d92027888a9b5c4a6b97dc751b034c2fa\output\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [:play-services-base:] C:\Users\usuario\.android\build-cache\aed0cf4d92027888a9b5c4a6b97dc751b034c2fa\output\AndroidManifest.xml:19:19-85

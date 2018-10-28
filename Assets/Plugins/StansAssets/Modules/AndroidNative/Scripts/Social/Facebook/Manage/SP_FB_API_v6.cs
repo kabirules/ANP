@@ -97,8 +97,10 @@ public class SP_FB_API_v6  : SP_FB_API {
 		
 	}
 	
-	
-	
+	public void AppInvite(string appLinkUrl, string previewImageUrl)
+    {
+        //Nothing to do here. This API is NOT available in Facebook SDK v6
+    }	
 	
 	//--------------------------------------
 	//  Get / Set

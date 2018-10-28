@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Development\Unity\ANP\Temp\gradleOut\libs\twitter4j-core-4.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="f4ac5989c7be37249dfe310bf78ba69773ebce2d">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\twitter4j-core-4.0.4_a3a201c535988b62bfd9f0f250039a0ddfac1198.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\eb080d524bf4b09448c91b794e93970023d6109a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="00d8b1db49c6b3ccb71dcc6468faf0d7c5f1824c">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_c357a93e1cbc10a7e4a6a4ddd7f2c51118dff261.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\a71951f16dabbe6752d2d64354f51bb414b3f4eb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="f9d7fac4632cb7f699fafea1c598a207091cb047">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_00a195ba2a58dedbbe253e98971585b5a1818f92.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\70d73cf5d4519c5551c229f4437de4ba4a0c0937\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="5dd2bf71afa151521ee98e0e4988acc1f6f7c370">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_a54314d2cddbec61de0e24d97e22ed64adcae26b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\56b538284be77b2c2b0bc11b60848e7ffec8306b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="5f1054add84f2844e5a809ef162c2a1a3fe81718">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_6a0dc1614bba2ccb04aa8a77f94f1eb556586ac3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\20733c06c2030d049dfe810f1d8ec2a762d4a1ea\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="643a2fd3bd06c44be5d20efc0ba4ca02036d2c8a">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_d4c13710bb59576b20de899a61706728844c7325.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Development\Unity\ANP\Temp\gradleOut\libs\an_licensing_library.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="8fb02d4464c9c31026dbc16db825019c03f3b0ca">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\an_licensing_library_107a0c05f08979b95aa8dc400afab054d7c8715b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\8c0efd79581d5992b4aa17c539f1099e00335164\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="f39d408dff17f5627212dacd35261a22d6a89541">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_734cd546da8cc693dd2c5acd971cd49a4b41d983.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\43f620bb140602432e4f57b773f4fb5a9286f634\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="bd6a3b6e3c7c584a47479070fb9292a6c7468657">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_c14f4d817242e881970fa8159d9918439d090582.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\e8000387bb5fb63bb64021f66e3025861d717166\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="f1aed7a5811b8700106be0286ac8e440e07ceeeb">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_7eee9a17d9ec10200656d14d15bbab4f113723a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\7712a0d207b963a495c986c1375050f70e1493b3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="2e36f9efacfe41041bd2570e285ed2c49c96ba9c">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_1f3e25d68f1b41e7f5b10664b726af2f359fa55a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\51791f9612777e8c003957c010d9dd5e7ce562f3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="4c27d4039cebb3953f29ec0324964b502d8e08f0">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_baeb986b666e976a3b07507dbde2fe29a8a7cd93.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Development\Unity\ANP\Temp\gradleOut\libs\unity-classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="d9b2b039db278d51b286ec5f80c5b1db71fd946d">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\unity-classes_6fb5a7a7305fab1859c9d26c7c536445fac7cf65.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\d071de6cdfb2c7b1f332f79c1674b4ad78a804f6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="aaf163ac652b3e984a2a5b23e5676631ec833d00">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_b788016418d918192e5829878fa7423881aad64f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Development\Unity\ANP\Temp\gradleOut\AN_Res\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="816f41664a101282212ecd58b45109b0aa211356">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_b8bb16bf28e108c9c9aef2e2e082fd54652c9e63.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Development\Unity\ANP\Temp\gradleOut\libs\image-chooser-library-1.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="c3617bbee43c94656fbd235a119bdaad2b3f03d8">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\image-chooser-library-1.6.0_09009103af2221f7a6e1c9f97ead7b8ace1045a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\c05a2676ffdef707363317b676a0fdd3e580ba2f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="f961122f45efe05f0e610bbe90885b46cf995809">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_b9b51fde41c1d01f09768d88735f4ea6abbbe3e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\8656cfe54620714a98a3a9594c21091a9f5f097e\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="a7b7571e6b6f89b9eca049c6a6f6917f8f9229d5">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_e7607ff0940ca96d3f5c778275a33821e5e6502b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\49029108c8939ca9b6a620b4c58f7c329f0293d0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="7a4eaaebbf8013af99511a48371f8cef06025960">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_f73ad0ba990b6655b84b9aae62b938a0236fbf85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\dd3a17b1eae982372e48fa117c5f645f10d90ca1\output\jars\libs\internal_impl-24.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\internal_impl-24.1.1_56ade2ca75902efee3d5314aac6b0d98787a58cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\584ee89cd68168efffc0c68a30c8cfcfb3f53294\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="c7e735784c9853573e457db7a841ab4a35c41ee7">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_05f129a28b6d66a5800f39a05ac09c5214b07bff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\616cf903318f53577e4c8d58d22830b79b61dc05\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="782d63e5456a49596ef322036691e25c60de3b83">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_5029da32cb9145900e335723286e371a789b0b67.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\432cb5a13abf8158e27b7b2ce2ecccd7085560a0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="18da012dae25653123d00a4231b24a41ad4e0fa3">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_af5dbaad359024dcfa0a91b61b0528eaf97e23d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\a4e9e29f02d6f22d020448b56d9b302d2432ad46\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="44f4b8f303198bd2f7d06371e8cbaa19087e48e1">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_b114685dcaa2c44cb58f0c1bcc8d9132d250be6c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\dd3a17b1eae982372e48fa117c5f645f10d90ca1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="6d7d803871e3203465f71a163e7af104f807b446">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_1573a235529774d08890265b9c5f35d2ef78815f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\a29c5ca1ea77d67e2f40836f45be40849ba275e0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="8040d53ecd4bd895360eafdc25e1c1cc9479e6aa">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_4deb98bf103a7af7e66cee8da761361b38d64319.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\aed0cf4d92027888a9b5c4a6b97dc751b034c2fa\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="2d45b277afdf55bcfdc005c03c0c2f1733aaa1b0">
+        <dex dex="C:\Development\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_b57b20b29f628001e27ef714ee871a4d94d441a7.jar" />
+    </item>
+
+</items>

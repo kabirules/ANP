@@ -10,7 +10,9 @@ public class AN_PackageCheckResult : SA.Common.Models.Result {
 		_packageName = packId;
 	}
 
-	public AN_PackageCheckResult(string packId, SA.Common.Models.Error error):base(error)  {}
+	public AN_PackageCheckResult(string packId, SA.Common.Models.Error error):base(error)  {
+		_packageName = packId;
+	}
 
 
 

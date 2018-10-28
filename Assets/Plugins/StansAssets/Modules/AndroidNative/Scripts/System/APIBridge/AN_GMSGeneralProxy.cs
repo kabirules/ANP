@@ -33,7 +33,11 @@ public class AN_GMSGeneralProxy : MonoBehaviour {
 	
 	public static void clearDefaultAccount() {
 		CallActivityFunction("clearDefaultAccount");
-	}	
+	}
+
+	public static void signOut() {
+		CallActivityFunction("signOut");
+	}
 	
 	public static void playServiceInit (string scopes) {
 		CallActivityFunction("playServiceInit", scopes);
@@ -89,12 +93,12 @@ public class AN_GMSGeneralProxy : MonoBehaviour {
 	}
 	
 	
-	public static void submitScore(string leaderboardName, long score) {
-		CallActivityFunction("submitScore", leaderboardName, score.ToString());
+	public static void submitScore(string leaderboardName, long score, string tag) {
+		CallActivityFunction("submitScore", leaderboardName, score.ToString(), tag);
 	}
 	
-	public static void submitScoreById(string leaderboardId, long score) {
-		CallActivityFunction("submitScoreById", leaderboardId, score.ToString());
+	public static void submitScoreById(string leaderboardId, long score, string tag) {
+		CallActivityFunction("submitScoreById", leaderboardId, score.ToString(), tag);
 	}
 	
 	public static void loadLeaderBoards() {
