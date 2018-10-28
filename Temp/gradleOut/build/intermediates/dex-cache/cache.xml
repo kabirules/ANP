@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="E:\Disco F\Unity\ANP\Temp\gradleOut\unity-android-resources\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="4dd61abf6b0dd4eb1e5375fe4b55ae81ea4bcc51">
+        <dex dex="E:\Disco F\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_852e8eedacf3cf0d8b5017ee81d3a6c1745aea89.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Disco F\Unity\ANP\Temp\gradleOut\libs\unity-classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="d9b2b039db278d51b286ec5f80c5b1db71fd946d">
+        <dex dex="E:\Disco F\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\unity-classes_07ab29d6ae92eb0f93cda41100d7667283970c6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\Disco F\Unity\ANP\Temp\gradleOut\libs\android-support-v4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="1dc1f63cee098b27db60b9a2833fd7ca58f89636">
+        <dex dex="E:\Disco F\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\android-support-v4_7173212f37bc0212822f5618115cb26716d6e96d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\usuario\.android\build-cache\c0c2d85b210aa7509ac5bd12e4d28a2404bf525f\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.1"
+        sha1="07e8a1e5ef47923f4da8560ac3d91cfbadb37a40">
+        <dex dex="E:\Disco F\Unity\ANP\Temp\gradleOut\build\intermediates\pre-dexed\debug\classes_442d6e12a0483151192e61cd18ded9b48a2070c9.jar" />
+    </item>
+
+</items>

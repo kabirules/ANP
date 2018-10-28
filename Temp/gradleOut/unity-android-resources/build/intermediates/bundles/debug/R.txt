@@ -1,0 +1,1 @@
+int drawable notify_icon_small 0x7f020000
