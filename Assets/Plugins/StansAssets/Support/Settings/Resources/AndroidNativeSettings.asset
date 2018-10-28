@@ -37,8 +37,8 @@ MonoBehaviour:
   EnableSoomla: 0
   SoomlaDownloadLink: http://goo.gl/7LYwuj
   SoomlaDocsLink: https://goo.gl/es5j1N
-  SoomlaGameKey: 
-  SoomlaEnvKey: 
+  SoomlaGameKey: db24ba61-3aa7-4653-a3f7-9c613cb2c0f3
+  SoomlaEnvKey: 3c3df370-ad80-4577-8fe5-ca2c49b2c1b4
   Ad_EditorFillRateIndex: 4
   Ad_EditorFillRate: 100
   Is_Ad_EditorTestingEnabled: 1
@@ -47,7 +47,7 @@ MonoBehaviour:
   Is_InApps_EditorTestingEnabled: 1
   Is_Leaderboards_Editor_Notifications_Enabled: 1
   Is_Achievements_Editor_Notifications_Enabled: 1
-  GCM_SenderId: YOUR_SENDER_ID_HERE
+  GCM_SenderId: 216817929098
   PushService: 0
   SaveCameraImageToGallery: 0
   UseProductNameAsFolderName: 1
@@ -56,9 +56,9 @@ MonoBehaviour:
   CameraCaptureMode: 0
   ImageFormat: 0
   ShowAppPermissions: 0
-  EnableBillingAPI: 1
-  EnablePSAPI: 1
-  EnableSocialAPI: 1
+  EnableBillingAPI: 0
+  EnablePSAPI: 0
+  EnableSocialAPI: 0
   EnableCameraAPI: 1
   ExpandNativeAPI: 0
   ExpandPSAPI: 0
@@ -81,23 +81,68 @@ MonoBehaviour:
   FirebaseAppId: 
   FirebaseApiKey: 
   DynamicLinks: []
-  InAppPurchasesAPI: 1
-  GooglePlayServicesAPI: 1
-  PlayServicesAdvancedSignInAPI: 1
-  GoogleButtonAPI: 1
-  AnalyticsAPI: 1
-  GoogleCloudSaveAPI: 1
-  PushNotificationsAPI: 1
-  GoogleMobileAdAPI: 1
+  InAppPurchasesAPI: 0
+  GooglePlayServicesAPI: 0
+  PlayServicesAdvancedSignInAPI: 0
+  GoogleButtonAPI: 0
+  AnalyticsAPI: 0
+  GoogleCloudSaveAPI: 0
+  PushNotificationsAPI: 0
+  GoogleMobileAdAPI: 0
   GoogleOAuthAPI: 1
   GalleryAPI: 1
   CameraAPI: 1
   KeepManifestClean: 1
   GooglePlayServiceAppID: 216817929098
   ToolbarSelectedIndex: 0
-  base64EncodedPublicKey: REPLACE_WITH_YOUR_PUBLIC_KEY
+  base64EncodedPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsV676BTvO5djSDdUwotbLCIPtGZ5OVCbIn402RXuEpDwuHZMIOy5E6DQjUlQPKCiB7A1Vx+ePQI50Gk8NO1zuPRBgCgvW/oTTf863KkF34QLZD+Ii8fc6VE0UKp3GfApnLmq2qtr1fwDmRCteBUET1h0EcRn3/6R/BA5DMmF1aTv8yUY5LQETWqEPIjGdyNaAhmnWf2sTliYLANiR51WXsfbDdCNT4Ux3gQo/XJynGadfwRS7A9N9e5SgvMEFUR6EwnANOF9QXgE2d0HEitpS56D3uHH/2LwICrTWAmbLX3qPYlQ3Ncf1SRyjqiKae2wW8QUnDFU5BSozwGW6tcQvQIDAQAB
   ShowStoreProducts: 1
-  InAppProducts: []
+  InAppProducts:
+  - IsOpen: 0
+    SKU: coins_bonus
+    _LocalizedPrice: 0.99$
+    _PriceAmountMicros: 990000
+    _PriceCurrencyCode: USD
+    _Description: 
+    _Title: Bonus Coins
+    _Texture: {fileID: 0}
+    _ProductType: 0
+  - IsOpen: 0
+    SKU: small_coins_bag
+    _LocalizedPrice: 0.99$
+    _PriceAmountMicros: 990000
+    _PriceCurrencyCode: USD
+    _Description: 
+    _Title: Small Coins Bag
+    _Texture: {fileID: 0}
+    _ProductType: 0
+  - IsOpen: 0
+    SKU: pm_coins
+    _LocalizedPrice: 0.99$
+    _PriceAmountMicros: 990000
+    _PriceCurrencyCode: USD
+    _Description: 
+    _Title: Coins Pack
+    _Texture: {fileID: 0}
+    _ProductType: 0
+  - IsOpen: 0
+    SKU: pm_green_sphere
+    _LocalizedPrice: 0.99$
+    _PriceAmountMicros: 990000
+    _PriceCurrencyCode: USD
+    _Description: 
+    _Title: Green Sphere
+    _Texture: {fileID: 0}
+    _ProductType: 0
+  - IsOpen: 0
+    SKU: pm_red_sphere
+    _LocalizedPrice: 0.99$
+    _PriceAmountMicros: 990000
+    _PriceCurrencyCode: USD
+    _Description: 
+    _Title: Red Sphere
+    _Texture: {fileID: 0}
+    _ProductType: 0
   ShowLeaderboards: 1
   Leaderboards: []
   ShowAchievements: 1

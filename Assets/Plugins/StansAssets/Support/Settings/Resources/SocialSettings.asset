@@ -25,13 +25,13 @@ MonoBehaviour:
   - user_games_activity
   - user_activities
   - user_likes
-  TWITTER_CONSUMER_KEY: REPLACE_WITH_YOUR_CONSUMER_KEY
-  TWITTER_CONSUMER_SECRET: REPLACE_WITH_YOUR_CONSUMER_SECRET
+  TWITTER_CONSUMER_KEY: wEvDyAUr2QabVAsWPDiGwg
+  TWITTER_CONSUMER_SECRET: igRxZbOrkLQPNLSvibNC3mdNJ5tOlVOPH3HNNKDY0
   TWITTER_ACCESS_TOKEN: 
   TWITTER_ACCESS_TOKEN_SECRET: 
   ShowEditorOauthTestingBlock: 0
-  TwitterAPI: 1
-  NativeSharingAPI: 1
-  InstagramAPI: 1
+  TwitterAPI: 0
+  NativeSharingAPI: 0
+  InstagramAPI: 0
   EnableImageSharing: 1
   KeepManifestClean: 1
