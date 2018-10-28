@@ -2,6 +2,7 @@ Android
 PlayerPath?
 E:/Disco F/Unity/ANP/ANP.apk
 SceneListBegin?
+Assets/AndroidGoodies/Example/AndroidGoodiesExampleScene.unity
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker

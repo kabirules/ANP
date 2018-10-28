@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: Assets/AndroidGoodies/Example/AndroidGoodiesExampleScene.unity
   isLoaded: 1
   isActive: 1
