@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CameraManager : MonoBehaviour {
 
-	public Image image;
+	public Sprite image;
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +32,7 @@ public class CameraManager : MonoBehaviour {
 					selectedImage.DisplayName, imageTexture2D.width, imageTexture2D.height);
 				AGUIMisc.ShowToast(msg);
 				Debug.Log(msg);
-				image.sprite = SpriteFromTex2D(imageTexture2D);
+				image = SpriteFromTex2D(imageTexture2D);
 
 				// Clean up
 				Resources.UnloadUnusedAssets();
