@@ -46,6 +46,15 @@ public class CameraManager : MonoBehaviour {
 		return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
 	}
 
+	public void MovePanels() {
+		GameObject mainPanel = GameObject.Find("MainPanel");
+		float newY = -492.375f;
+		Debug.Log(newY);
+		mainPanel.transform.position = new Vector3(mainPanel.transform.position.x,
+												   mainPanel.transform.position.y-462f,
+												   mainPanel.transform.position.z);
+	}
+
 	public void AddScript() {
 		gameObject.AddComponent<CameraFilterPack_Atmosphere_Rain_Pro_3D>();
 	}
