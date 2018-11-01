@@ -15,7 +15,6 @@ public class CameraManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
 	public void OpenCamera() {
@@ -48,15 +47,56 @@ public class CameraManager : MonoBehaviour {
 
 	public void MovePanels() {
 		GameObject mainPanel = GameObject.Find("MainPanel");
-		float newY = -492.375f;
-		Debug.Log(newY);
-		mainPanel.transform.position = new Vector3(mainPanel.transform.position.x,
-												   mainPanel.transform.position.y-462f,
+		if (mainPanel.transform.position.y > 600f) {
+			mainPanel.transform.position = new Vector3(mainPanel.transform.position.x,
+												   33f,
 												   mainPanel.transform.position.z);
+		} else {
+			mainPanel.transform.position = new Vector3(mainPanel.transform.position.x,
+												   603f,
+												   mainPanel.transform.position.z);
+												   // 615.0938f,
+		}
+		/*
+		GameObject cameraObj = GameObject.Find("Camera");
+		Camera camera = cameraObj.GetComponent<Camera>();
+		camera.rect = new Rect(0.05f, camera.rect.y*-1f, 0.9f, 1f);
+		*/
 	}
 
-	public void AddScript() {
+	public void AddScriptRain() {
+		this.ClearFilters();
 		gameObject.AddComponent<CameraFilterPack_Atmosphere_Rain_Pro_3D>();
 	}
+
+	public void AddScriptSnow() {
+		this.ClearFilters();
+		gameObject.AddComponent<CameraFilterPack_Atmosphere_Snow_8bits>();
+	}
+
+	public void AddScriptFog() {
+		this.ClearFilters();
+		gameObject.AddComponent<CameraFilterPack_3D_Fog_Smoke>();
+	}
+
+	public void AddScriptBlizzard() {
+		this.ClearFilters();
+		gameObject.AddComponent<CameraFilterPack_Blizzard>();
+	}	
+
+	public void ClearFilters() {
+		Destroy(gameObject.GetComponent<CameraFilterPack_Atmosphere_Snow_8bits>());
+		Destroy(gameObject.GetComponent<CameraFilterPack_Atmosphere_Rain_Pro_3D>());
+		Destroy(gameObject.GetComponent<CameraFilterPack_3D_Fog_Smoke>());
+		Destroy(gameObject.GetComponent<CameraFilterPack_Blizzard>());
+	}
+
+	public void More() {
+		Debug.Log("More Button Pressed");
+	}
+
+	
+
+	
 
 }
