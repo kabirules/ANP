@@ -15,3 +15,16 @@ CameraFilterPack_AAA_Blood_Hit
 CameraFilterPack_AAA_Blood_Plus
 CameraFilterPack_AAA_BloodOnScreen
 CameraFilterPack_AAA_SuperComputer - OK
+CameraFilterPack_AAA_SuperHexagon - OK
+CameraFilterPack_AAA_WaterDrop
+CameraFilterPack_AAA_WaterDropPro
+CameraFilterPack_Alien_Vision - OK
+CameraFilterPack_Antialiasing_FXAA
+CameraFilterPack_Atmosphere_Fog
+CameraFilterPack_Atmosphere_Rain - OK
+CameraFilterPack_Atmosphere_Rain_Pro - OK
+CameraFilterPack_Atmosphere_Rain_Pro_3D - OK (mejor de los tres) 
+CameraFilterPack_Atmosphere_Snow_8bits - OK
+CameraFilterPack_Blend2Camera_Blend - OK
+CameraFilterPack_Blend2Camera_BlueScreen
+CameraFilterPack_Blend2Camera_Color - OK

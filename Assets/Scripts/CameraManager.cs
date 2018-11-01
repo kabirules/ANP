@@ -44,5 +44,10 @@ public class CameraManager : MonoBehaviour {
 	static Sprite SpriteFromTex2D(Texture2D texture)
 	{
 		return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-	}	
+	}
+
+	public void AddScript() {
+		gameObject.AddComponent<CameraFilterPack_Atmosphere_Rain_Pro_3D>();
+	}
+
 }
