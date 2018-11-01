@@ -546,6 +546,7 @@
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Drawing_Lines.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_OldFilm_Cutting2.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_FX_Glitch3.shader" />
+     <None Include="Assets\TestedFilters.txt" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Vision_Crystal.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Vision_Warp2.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Drawing_Curve.shader" />

@@ -1,0 +1,17 @@
+CameraFilterPack_3D_Anomaly
+CameraFilterPack_3D_Binary
+CameraFilterPack_3D_BlackHole
+CameraFilterPack_3D_Computer - OK
+CameraFilterPack_3D_Distortion
+CameraFilterPack_3D_Fog_Smoke - OK
+CameraFilterPack_3D_Ghost
+CameraFilterPack_3D_Inverse - OK
+CameraFilterPack_3D_Matrix - OK
+CameraFilterPack_3D_Myst - OK (igual que fog - smoke?)
+CameraFilterPack_3D_Scan_Scene
+CameraFilterPack_3D_Shield
+CameraFilterPack_AAA_Blood
+CameraFilterPack_AAA_Blood_Hit
+CameraFilterPack_AAA_Blood_Plus
+CameraFilterPack_AAA_BloodOnScreen
+CameraFilterPack_AAA_SuperComputer - OK
