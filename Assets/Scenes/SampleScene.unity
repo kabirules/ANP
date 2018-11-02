@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb61b1a91121bd64ca51d62e109ff939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageUI: {fileID: 1500035228}
   image: {fileID: 0}
 --- !u!20 &519420031
 Camera:

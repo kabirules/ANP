@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 public class CameraManager : MonoBehaviour {
 
-	public Sprite image;
+	public GameObject imageUI;
+	public Sprite image; //TODO remove
+
+	SpriteRenderer spriteRenderer;
 
 	// Use this for initialization
 	void Start () {
-		
+		spriteRenderer = imageUI.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -31,7 +34,8 @@ public class CameraManager : MonoBehaviour {
 					selectedImage.DisplayName, imageTexture2D.width, imageTexture2D.height);
 				AGUIMisc.ShowToast(msg);
 				Debug.Log(msg);
-				image = SpriteFromTex2D(imageTexture2D);
+				image = SpriteFromTex2D(imageTexture2D); //TODO remove
+				spriteRenderer.sprite = SpriteFromTex2D(imageTexture2D);
 
 				// Clean up
 				Resources.UnloadUnusedAssets();
@@ -57,11 +61,6 @@ public class CameraManager : MonoBehaviour {
 												   mainPanel.transform.position.z);
 												   // 615.0938f,
 		}
-		/*
-		GameObject cameraObj = GameObject.Find("Camera");
-		Camera camera = cameraObj.GetComponent<Camera>();
-		camera.rect = new Rect(0.05f, camera.rect.y*-1f, 0.9f, 1f);
-		*/
 	}
 
 	public void AddScriptRain() {
