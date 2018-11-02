@@ -684,7 +684,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 519420030}
-        m_MethodName: More
+        m_MethodName: OpenCamera
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1377,7 +1377,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1500035230}
   - component: {fileID: 1500035229}
-  - component: {fileID: 1500035231}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -1443,31 +1442,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1500035231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1500035228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 870979ffebfabc34f87bfa16adff1111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SCShader: {fileID: 4800000, guid: c6cc00edd36b82f4ba64510febb20d71, type: 3}
-  Hit_Left: 1
-  Hit_Up: 0
-  Hit_Right: 0
-  Hit_Down: 0
-  Blood_Hit_Left: 0
-  Blood_Hit_Up: 0
-  Blood_Hit_Right: 0
-  Blood_Hit_Down: 0
-  Hit_Full: 0
-  Blood_Hit_Full_1: 0
-  Blood_Hit_Full_2: 0
-  Blood_Hit_Full_3: 0
-  LightReflect: 0.5
 --- !u!1 &1553483826
 GameObject:
   m_ObjectHideFlags: 0

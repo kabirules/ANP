@@ -547,7 +547,6 @@
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_OldFilm_Cutting2.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_FX_Glitch3.shader" />
      <None Include="Assets\TestedFilters.txt" />
-     <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Vision_Crystal.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Vision_Warp2.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Drawing_Curve.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Retro_Loading.shader" />
@@ -564,7 +563,6 @@
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Distortion_Half_Sphere.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Edge_Edge_filter.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Light_Water2.shader" />
-     <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Broken_Screen.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_FX_Drunk.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_TV_WideScreenHorizontal.shader" />
      <None Include="Assets\Camera Filter Pack\Resources\CameraFilterPack_Gradients_ElectricGradient.shader" />
