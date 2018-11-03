@@ -27,6 +27,7 @@ public class CameraManager : MonoBehaviour {
 	}
 
 	public void OpenCamera() {
+		AGUIMisc.ShowToast("Opening Camera");
 		var shouldGenerateThumbnails = false;
 
 		// if image is larger it will be downscaled to the max size proportionally
@@ -56,28 +57,33 @@ public class CameraManager : MonoBehaviour {
 		return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
 	}
 
-	public void MovePanels() {
+	public void MovePanelUp() {
 		GameObject mainPanel = GameObject.Find("MainPanel");
 		RectTransform rectTransform = mainPanel.GetComponent<RectTransform>();
-		Debug.Log(rectTransform.position.x);
-		Debug.Log(rectTransform.position.y);
-		Debug.Log(rectTransform.position.z);
-		/*
-		if (mainPanel.transform.position.y > 600f) {
-			mainPanel.transform.position = new Vector3(mainPanel.transform.position.x,
-												   33f,
-												   mainPanel.transform.position.z);
-		} else {
-			mainPanel.transform.position = new Vector3(mainPanel.transform.position.x,
-												   603f,
-												   mainPanel.transform.position.z);
-												   // 615.0938f,
-		}
-		*/
 		mainPanel.GetComponent<RectTransform>().position = new Vector3(rectTransform.position.x,
-																	   rectTransform.position.y-400f,
+																	   rectTransform.position.y+20f,
 																	   rectTransform.position.z);
 	}
+
+	public void MovePanelDown() {
+		GameObject mainPanel = GameObject.Find("MainPanel");
+		RectTransform rectTransform = mainPanel.GetComponent<RectTransform>();
+		mainPanel.GetComponent<RectTransform>().position = new Vector3(rectTransform.position.x,
+																	   rectTransform.position.y-20f,
+																	   rectTransform.position.z);
+	}
+	
+	public void Screenshot() {
+		var imageTitle = "Screenshot-" + System.DateTime.Now.ToString("yy-MM-dd-hh-mm-ss");
+		const string folderName = "com.javifont.camera";
+		AGGallery.SaveImageToGallery(imageToGallery, imageTitle, folderName, ImageFormat.JPEG);
+		AGUIMisc.ShowToast("Image saved in the gallery", AGUIMisc.ToastLength.Long);
+	}
+
+	public void More() {
+		Debug.Log("More Button Pressed");
+	}	
+
 /////////////////////
 // FILTERS - Begin //
 /////////////////////
@@ -112,11 +118,4 @@ public class CameraManager : MonoBehaviour {
 // FILTERS - End //
 /////////////////////	
 
-	public void More() {
-		Debug.Log("More Button Pressed");
-		var imageTitle = "Screenshot-" + System.DateTime.Now.ToString("yy-MM-dd-hh-mm-ss");
-		const string folderName = "com.javifont.camera";
-		AGGallery.SaveImageToGallery(imageToGallery, imageTitle, folderName, ImageFormat.JPEG);
-		AGUIMisc.ShowToast("Image saved in the gallery", AGUIMisc.ToastLength.Long);
-	}
 }
