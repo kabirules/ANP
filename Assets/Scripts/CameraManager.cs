@@ -7,9 +7,13 @@ using UnityEngine.UI;
 public class CameraManager : MonoBehaviour {
 
 	public GameObject imageUI;
+	private Texture2D imageToGallery;
 	public Sprite image; //TODO remove
 
 	SpriteRenderer spriteRenderer;
+
+	private const string MediaStoreImagesMediaClass = "android.provider.MediaStore$Images$Media";
+	private static AndroidJavaObject _activity;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +34,7 @@ public class CameraManager : MonoBehaviour {
 			{
 				// Load received image into Texture2D
 				var imageTexture2D = selectedImage.LoadTexture2D();
+				this.imageToGallery = imageTexture2D;
 				string msg = string.Format("{0} was taken from camera with size {1}x{2}",
 					selectedImage.DisplayName, imageTexture2D.width, imageTexture2D.height);
 				AGUIMisc.ShowToast(msg);
@@ -92,10 +97,36 @@ public class CameraManager : MonoBehaviour {
 
 	public void More() {
 		Debug.Log("More Button Pressed");
+		this.SaveImageToGallery(this.imageToGallery, "", description: "");
 	}
 
-	
+	public static string SaveImageToGallery(Texture2D texture2D, string title, string description)	{
+		using (var mediaClass = new AndroidJavaClass(MediaStoreImagesMediaClass)) {
+			using (var cr = Activity.Call<AndroidJavaObject>("getContentResolver")) {
+				var image = Texture2DToAndroidBitmap(texture2D);
+				var imageUrl = mediaClass.CallStatic<string>("insertImage", cr, image, title, description);
+				return imageUrl;
+			}
+		}
+	}
 
-	
+	public static AndroidJavaObject Texture2DToAndroidBitmap(Texture2D texture2D) {
+		byte[] encoded = texture2D.EncodeToPNG();
+		using (var bf = new AndroidJavaClass("android.graphics.BitmapFactory"))	{
+			return bf.CallStatic<AndroidJavaObject>("decodeByteArray", encoded, 0, encoded.Length);
+		}
+	}
 
+	public static AndroidJavaObject Activity
+		{
+			get
+			{
+				if (_activity == null)
+				{
+					var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+					_activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+				}
+				return _activity;
+			}
+		}	
 }
