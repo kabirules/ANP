@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DeadMosquito.AndroidGoodies;
 using UnityEngine.UI;
+using System;
 
 public class CameraManager : MonoBehaviour {
 
@@ -11,13 +12,14 @@ public class CameraManager : MonoBehaviour {
 	public Sprite image; //TODO remove
 
 	SpriteRenderer spriteRenderer;
-
-	private const string MediaStoreImagesMediaClass = "android.provider.MediaStore$Images$Media";
-	private static AndroidJavaObject _activity;
+	GameObject mainPanel;
+	GameObject canvas;
 
 	// Use this for initialization
 	void Start () {
-		spriteRenderer = imageUI.GetComponent<SpriteRenderer>();
+		this.spriteRenderer = imageUI.GetComponent<SpriteRenderer>();
+		this.mainPanel = GameObject.Find("MainPanel");
+		this.canvas = GameObject.Find("Canvas");
 	}
 	
 	// Update is called once per frame
@@ -97,36 +99,8 @@ public class CameraManager : MonoBehaviour {
 
 	public void More() {
 		Debug.Log("More Button Pressed");
-		this.SaveImageToGallery(this.imageToGallery, "", description: "");
+		var imageTitle = "Screenshot-" + System.DateTime.Now.ToString("yy-MM-dd-hh-mm-ss");
+		const string folderName = "com.javifont.camera";
+		AGGallery.SaveImageToGallery(imageToGallery, imageTitle, folderName, ImageFormat.JPEG);
 	}
-
-	public static string SaveImageToGallery(Texture2D texture2D, string title, string description)	{
-		using (var mediaClass = new AndroidJavaClass(MediaStoreImagesMediaClass)) {
-			using (var cr = Activity.Call<AndroidJavaObject>("getContentResolver")) {
-				var image = Texture2DToAndroidBitmap(texture2D);
-				var imageUrl = mediaClass.CallStatic<string>("insertImage", cr, image, title, description);
-				return imageUrl;
-			}
-		}
-	}
-
-	public static AndroidJavaObject Texture2DToAndroidBitmap(Texture2D texture2D) {
-		byte[] encoded = texture2D.EncodeToPNG();
-		using (var bf = new AndroidJavaClass("android.graphics.BitmapFactory"))	{
-			return bf.CallStatic<AndroidJavaObject>("decodeByteArray", encoded, 0, encoded.Length);
-		}
-	}
-
-	public static AndroidJavaObject Activity
-		{
-			get
-			{
-				if (_activity == null)
-				{
-					var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-					_activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
-				}
-				return _activity;
-			}
-		}	
 }
