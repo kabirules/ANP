@@ -58,6 +58,11 @@ public class CameraManager : MonoBehaviour {
 
 	public void MovePanels() {
 		GameObject mainPanel = GameObject.Find("MainPanel");
+		RectTransform rectTransform = mainPanel.GetComponent<RectTransform>();
+		Debug.Log(rectTransform.position.x);
+		Debug.Log(rectTransform.position.y);
+		Debug.Log(rectTransform.position.z);
+		/*
 		if (mainPanel.transform.position.y > 600f) {
 			mainPanel.transform.position = new Vector3(mainPanel.transform.position.x,
 												   33f,
@@ -68,8 +73,14 @@ public class CameraManager : MonoBehaviour {
 												   mainPanel.transform.position.z);
 												   // 615.0938f,
 		}
+		*/
+		mainPanel.GetComponent<RectTransform>().position = new Vector3(rectTransform.position.x,
+																	   rectTransform.position.y-400f,
+																	   rectTransform.position.z);
 	}
-
+/////////////////////
+// FILTERS - Begin //
+/////////////////////
 	public void AddScriptRain() {
 		this.ClearFilters();
 		gameObject.AddComponent<CameraFilterPack_Atmosphere_Rain_Pro_3D>();
@@ -97,10 +108,15 @@ public class CameraManager : MonoBehaviour {
 		Destroy(gameObject.GetComponent<CameraFilterPack_Blizzard>());
 	}
 
+/////////////////////
+// FILTERS - End //
+/////////////////////	
+
 	public void More() {
 		Debug.Log("More Button Pressed");
 		var imageTitle = "Screenshot-" + System.DateTime.Now.ToString("yy-MM-dd-hh-mm-ss");
 		const string folderName = "com.javifont.camera";
 		AGGallery.SaveImageToGallery(imageToGallery, imageTitle, folderName, ImageFormat.JPEG);
+		AGUIMisc.ShowToast("Image saved in the gallery", AGUIMisc.ToastLength.Long);
 	}
 }
