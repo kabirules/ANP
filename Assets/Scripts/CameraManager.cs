@@ -89,7 +89,10 @@ public class CameraManager : MonoBehaviour {
 /////////////////////
 	public void AddScriptRain() {
 		this.ClearFilters();
-		gameObject.AddComponent<CameraFilterPack_Atmosphere_Rain_Pro_3D>();
+		// gameObject.AddComponent<CameraFilterPack_Atmosphere_Rain_Pro_3D>();
+		gameObject.AddComponent<CameraFilterPack_AAA_Blood>();
+		gameObject.AddComponent<CameraFilterPack_AAA_Blood_Hit>();
+		gameObject.AddComponent<CameraFilterPack_AAA_Blood_Plus>();
 	}
 
 	public void AddScriptSnow() {
